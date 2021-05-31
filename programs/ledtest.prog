@@ -1,0 +1,63 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti
+nop
+
+.align
+addr:		.word 0x000F0000
+//w_cnt_top:	.word 0x717D7840	//250 ms @ 100MHz
+w_cnt_top:	.word 0x40		//for simulation only
+
+main:
+ldr r0,>addr	//LED addr
+addi r6,8		//outer counter top
+clr r7			//wait counter
+ldr r8,>w_cnt_top
+
+out_loop:
+clr r1
+st08 r0,r1
+call >wait
+nop
+
+fill:
+lsh r1,r1,1
+addi r1,1
+st08 r0,r1
+call >wait
+nop
+
+addi r5,1
+cmp neq r5,r6
+br true >fill
+nop
+clr r5
+
+flush:
+lsh r1,r1,1
+st08 r0,r1
+call >wait
+nop
+
+addi r5,1
+cmp neq r5,r6
+br true >flush
+nop
+clr r5
+br always >out_loop
+nop
+
+//subroutine that iterates until counter overflow
+wait:
+clr r7				//inititalize inner counter
+inc_i:
+cmp neq r7,r8
+br true >inc_i		//if i=cnt_top
+addi r7,1
+reti 				//else
+nop

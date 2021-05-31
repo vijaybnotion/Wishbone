@@ -1,0 +1,43 @@
+reset:
+	br always >main
+	nop
+
+hardfault:
+	br always >main
+	reti
+
+memfault:
+	br always >main
+	reti
+
+.align
+t1: 	.word 0xA0B0C0D0
+t2: 	.word 0xF0AB2FB9
+t3: 	.word 0xCCCCCCCC
+adr1:	.word 0x150
+adr2:	.word 0x144
+adr3:	.word 0x10F
+
+main:
+	ldr r1, >adr1
+	ldr r2, >adr2
+	ldr r3, >adr3
+
+	addi r0,-1
+
+	ldr r4,>t1
+	st16 r1,r0	//mem() = 0x0000FFFF
+	st08 r2,r0	//mem() = 0x000000FF
+	st32 r3,r0	//mem() = 0xFFFFFFFF
+	ldr r11,>t1
+	ldr r10,>t2
+	ldr r9,>t3
+	ldr r7,>t1
+	ldr r6,>t2
+	ld16 r11,r1
+	ld08 r10,r2
+	ld32 r9,r3
+
+end:
+	br always >end
+	nop

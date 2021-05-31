@@ -1,0 +1,45 @@
+reset: br >main
+nop
+hardfault: reti
+nop
+memfault: reti
+nop
+
+main: // actual start of program
+ldr sp, >sp_init
+
+clr r5
+clr r6
+clr r7
+clr r8
+clr r9
+
+ldr r0, >addr
+addi r1, 0x01
+st32 r0, r1
+ld32 r5, r0
+
+addi r0, 1
+addi r1, 1
+st32 r0, r1
+ld32 r6, r0
+
+addi r0, 1
+addi r1, 1
+st32 r0, r1
+ld32 r7, r0
+
+addi r0, 1
+addi r1, 1
+st32 r0, r1
+ld32 r8, r0
+
+addi r0, 1
+addi r1, 1
+st32 r0, r1
+ld32 r9, r0
+
+.align
+sp_init: .word 1020 // 0x3FC
+addr: .word 0x101
+

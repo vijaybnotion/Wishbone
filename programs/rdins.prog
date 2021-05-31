@@ -1,0 +1,29 @@
+reset: br >main
+nop
+hardfault: reti
+nop
+memfault: reti
+nop
+
+.align
+adr_a:	.word	0x3C0	//  (30b adr), actual adr at mem 0xF00 (0x3C0<<2 bits)
+adr_b:	.word	0x3F0	//  (30b adr), actual adr at mem 0xFC0 (0x3F0<<2 bits)
+
+
+main:
+clr r0
+clr r1
+clr r2
+clr r3
+
+//------------------------------
+// read only ins test
+//------------------------------
+
+addi r1, 0x01	//expected r1 = 0x01
+addi r2, 0x02	//expected r1 = 0x02
+add r0, r1, r2	// expected r0 = 0x03
+add r3, r0, r1	// expected r3 = 3 + 1 = 0x4
+
+end: br always >end
+nop

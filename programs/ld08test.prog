@@ -1,0 +1,19 @@
+addi r0,0x50
+addi r1,7
+st08 r0,r1
+
+nop
+nop
+clr r1
+
+ld08 r2,r0
+
+nop
+nop
+
+st08 r3,r2
+nop
+end:
+nop
+br always >end
+nop

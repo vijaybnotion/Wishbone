@@ -1,0 +1,35 @@
+reset: br >main
+nop
+hardfault: reti
+nop
+memfault: reti
+nop
+
+main: // actual start of program
+
+clr r0
+clr r1
+clr r2
+clr r3
+clr r4
+
+//test move = or
+addi r0, 0x55		// expected r0 = 0x55
+mov r1, r0			// expected r1 = 0x55
+
+//test shift
+addi r2, 0x0A		//expected r2 = 0x0A
+lsh	r3, r2, 16		//expected r3 = 0xA_0000
+lsh	r3, r3, 12		//expected r3 = 0xA000_0000
+
+// test write
+ldr r4, >adr_a		//expected r4 = 0x3C0
+st32 r4, r3			//expected value at addr 0xF00 = 0xA000_0000
+
+end: br always >end
+nop
+
+		.align
+adr_a:	.word	0x3C0	// actual adr at mem 0xF00 (0x3C0<<2 bits)
+//adr_a:	.word	0x3F8
+//adr_a:	.word	0x20C

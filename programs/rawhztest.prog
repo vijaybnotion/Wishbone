@@ -1,0 +1,35 @@
+reset: 
+br >main
+nop
+hardfault: 
+reti
+nop
+memfault: 
+reti
+nop
+
+.align
+adr_a:	.word	0x3C0	// actual adr at mem 0xF0 (0x3C0>>2 bits)
+adr_b:	.word	0x3F0	// actual adr at mem 0xFC (0x3F0>>2 bits)
+
+main:
+ldr r5, >adr_a
+//wait for one cycle after a load is necessary
+nop
+ldr r1, >adr_b
+
+addi r6,-2
+addi r8, 0x50
+nop
+
+st32 r5, r6
+//waiting for one cycle when re-accessing a stored value is in accordance with design
+nop
+ld32 r7,r5
+addi r9,0x50
+ld32 r8,r5
+addi r8,1
+st32 r5,r8
+
+end: br always >end
+nop

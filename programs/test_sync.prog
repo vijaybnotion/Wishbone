@@ -1,0 +1,52 @@
+reset: br >main
+nop
+hardfault: reti
+nop
+memfault: reti
+nop
+
+.align
+sp_init:	.word 0x400 // Stackpointer Initial Value
+
+main:
+	ldr sp, >sp_init
+	clr sr
+
+//base addr
+add r0,r0,sp
+//addi r0,0x40
+addi r10,4
+add r1,r0,r10
+add r2,r1,r10
+
+//values t.b. stored
+addi r3,-1
+addi r4,-2
+addi r5,-3
+
+//store values
+st32 r0,r3
+st32 r1,r4
+st32 r2,r5
+
+//retrieve values
+
+ld32 r6,r0
+ld32 r7,r1
+ld32 r8,r2
+nop
+nop
+nop
+nop
+
+ld32 r6,r0
+st32 r1,r6
+ld32 r7,r0
+ld32 r7,r0
+st32 r1,r6
+st32 r1,r6
+ld32 r7,r0
+
+end:
+br always >end
+nop

@@ -1,0 +1,21 @@
+addi r0,0x50
+addi r1,-3
+nop
+nop
+st32 r0,r1
+
+nop
+nop
+clr r1
+
+ld32 r2,r0
+
+nop
+nop
+
+st32 r3,r2
+nop
+end:
+nop
+br always >end
+nop

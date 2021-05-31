@@ -1,0 +1,33 @@
+// Interrupt Table
+reset:     br >main
+           nop
+hardfault: br >hardfault_handler
+           nop
+memfault:  br >memfault_handler
+           nop
+irq3:      br >irq3_handler
+           nop
+
+// Main Function
+main:
+           ldr sp, >sp_init
+           clr sr
+
+// endless loop to stop program
+final:
+           br >final
+           nop
+
+// Interrupt Handler
+hardfault_handler:
+           reti
+
+memfault_handler:
+           reti
+
+irq3_handler:
+           reti
+
+// Constant Declaration
+.align
+sp_init:   .word 0x400 // Stackpointer Initial Value

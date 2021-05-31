@@ -1,0 +1,176 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti
+nop
+
+
+.align
+lookup_table:   //lookup table initialization
+	.word 0x01000000
+	.word 0x01180000
+	.word 0x01240000
+	.word 0x01420000
+	.word 0x01810000
+	.word 0x01990000
+	.word 0x01A50000
+	.word 0x01C30000
+	.word 0x01E70000
+	.word 0x01FF0000
+	.word 0x01E70000
+	.word 0x01C30000
+	.word 0x01810000
+
+.align
+lookuptable_ptr:
+	.word =lookup_table
+
+flags_addr:
+.word 0x000F0010
+cnt_addr:
+.word 0x000F0014
+
+bufferwrite :
+.word 0x01000000
+
+count_value:
+.word 0x00000008
+
+count_value2:
+.word 0x00000004
+
+onoff:
+.word 0x00000001
+
+regstatus :
+.word 0x00000000
+
+led_addr:
+.word 0x000F0000
+w_cnt_top:	.word 0xFF
+
+buffer_write:
+.word 0x01000000
+
+shiftpattern :
+.word 0x00100000
+
+buffer_clear:
+.word 0x00000100
+
+main:
+ldr r0,>led_addr
+ldr r2,>flags_addr
+ldr r3,>cnt_addr
+ldr r5,>onoff
+ldr r9,>lookuptable_ptr
+ldr r4,>count_value
+ldr r6,>buffer_clear
+
+loop:					//loop to repeat pattern1 and pattern2
+
+
+ldr r4,>count_value
+nop
+st32 r3,r4				//count value for first set of patterns is loaded
+
+clr r8
+clr r7					//inititalize inner counter
+addi r8,13			//to run through all 13 patterns of first set
+
+ledpattern1:
+ld32 r10,r9 		// load from lookuptable pointer
+st32 r2, r10		// store first set of patterns into the flag address
+addi r9, 4			//increment to the next address of lookuptable
+
+cmp neq r7,r8
+br true >ledpattern1		//loop through all 13 patterns of first set
+addi r7,1
+nop
+
+st32 r2, r5				//turn on
+nop
+
+call >wait
+nop
+
+st32 r2, r5				//turn off
+nop
+
+st32 r2, r6				//buffer clear
+nop
+
+clr r4
+clr r9
+clr r10
+
+ledpattern2:
+
+ldr r4,>count_value2
+nop
+st32 r3,r4				//count value for second set of patterns is loaded
+
+	clr r1
+	clr r6				//inititalize inner counter
+	clr r7
+	clr r10
+	clr r11
+		
+	ldr r1,>regstatus
+	ldr r7,>bufferwrite
+	addi r10,7
+
+	or r1,r1,r7 	//initial value for shifting
+		
+	rshift:
+	rsh r1,r1,1
+	or r11,r1,r7		//set buffer write
+	st32 r2, r11		// store second set of right shifted patterns into the flag address
+	cmp neq r6,r10
+	br true >rshift		//right shift and loop 7 times for second set
+	addi r6,1
+
+	clr r6
+
+	lshift:
+	lsh r1,r1,1
+	or r11,r1,r7
+	st32 r2, r11		// store second set of left shifted patterns into the flag address
+	cmp neq r6,r10
+	br true >lshift		//left shift and loop 7 times for second set
+	addi r6,1
+	
+st32 r2, r5				//turn on
+nop
+
+call >wait
+nop
+
+ldr r6,>buffer_clear
+nop 
+
+st32 r2, r5				//turn off
+nop
+
+st32 r2, r6				//buffer clear
+nop
+
+call >loop
+nop
+
+wait:
+
+clr r8
+	ldr r8,>w_cnt_top
+	nop
+	clr r7				//inititalize inner counter
+	inc_i:
+	cmp neq r7,r8
+	br true >inc_i		//if i=cnt_top
+	addi r7,1
+	ret					//else
+	nop

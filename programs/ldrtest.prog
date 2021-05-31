@@ -1,0 +1,10 @@
+main:
+ldr r0, >dmemaddr
+clr r1
+nop
+st08 r1,r0
+br always >main
+nop
+
+.align
+dmemaddr: .word 0xFFFF

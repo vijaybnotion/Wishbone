@@ -1,0 +1,47 @@
+//
+// This program let's the connected LEDs flash
+// with a duty cycle of 50% and
+// a period of approx. 1s
+//
+// r0: counter top
+// r1: counter
+// r2: LED address
+// r3: ones (0xFF)
+// r4: LED values
+
+irq0: br always >main
+nop
+
+// initialization constants
+.align
+sp_init: .word 0x200      // Stack pointer
+top:     .word 16000000   // Counter top
+ptr:     .word 0x0        // pointer to I/O device
+
+// main procedure
+main:
+
+// init registers
+ldr sp, >sp_init
+ldr r0, >top
+ldr r2, >ptr
+clr r1
+clr r3
+clr r4
+addi r3, -1
+
+// loop
+loop:
+
+cmp neq r1, r0
+br true >loop   // loop if not equal (BDS!)
+addi r1, 1      // increment counter
+
+// counter top reached, set LEDs and clear counter
+xor r4, r4, r3  // invert last byte of r4
+st08 r2, r4     // write byte to I/O device
+br always >loop // branch back to loop (BDS!)
+clr r1          // reset counter
+
+nop
+nop

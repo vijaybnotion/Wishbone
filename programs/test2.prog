@@ -1,0 +1,50 @@
+reset: br >main
+nop
+hardfault: reti
+nop
+memfault: reti
+nop
+irq3: br >irq_handler
+nop
+
+main: // actual start of program
+ldr sp, >sp_init
+
+ldr r1, >startvalue
+clr r2
+clr sr
+
+test: mov r1, pc
+
+loop: addi r2, 1
+cmp ll r2, r1
+br true >loop
+nop
+
+cmp le r2, r1
+
+call true >final
+addi r3, 1
+
+end: br >end
+nop
+
+final: addi r10, 1
+cmp eq r10, r1
+ret true
+nop
+br >final
+nop
+
+irq_handler: addi r4, 1
+reti
+
+
+nop
+nop
+nop
+nop
+.align
+sp_init: .word 1020
+startvalue: .word 15
+

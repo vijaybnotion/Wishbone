@@ -1,0 +1,81 @@
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti
+nop
+
+.align
+addr:
+.word 0x000F0000			//LED Base address
+
+switch_base_adr:
+.word  0x000F0004			//switch base address
+
+w_cnt_top:	.word 0x1		//
+
+main:
+ldr r0,>addr				//Load LED addr
+ldr r2,>switch_base_adr 		//switch address
+addi r2,2 				//started from 0x000F0006, we mask out 0x000F0004 and 0x000F0005 memory array
+clr r6
+addi r6,8				//outer counter(8 LED)
+clr r7					//wait counter
+clr r3
+ldr r8,>w_cnt_top        		// conrol time between 2 leds blinking
+
+out_loop:
+clr r1
+st08 r0,r1
+ld16 r4,r2
+call >wait
+nop
+
+fill:
+	lsh r1,r1,1
+	addi r1,1
+	st08 r0,r1
+	call >wait
+	nop
+
+	addi r5,1
+	cmp neq r5,r6
+	br true >fill
+	nop
+	clr r5
+
+flush:
+	lsh r1,r1,1
+	st08 r0,r1
+	call >wait
+	nop
+
+	addi r5,1
+	cmp neq r5,r6
+	br true >flush
+	nop
+	clr r5
+	//addi r2,1			//To get switch value from 0x000F0007 memory array in next out_loop cycle
+	br always >out_loop
+	nop
+
+//subroutine to iterate until counter overflow
+wait:
+        clr r3
+        inc_prescaler:
+	clr r7				//inititalize inner counter
+	
+	inc_i:
+	cmp neq r7,r8
+	br true >inc_i			//if i=cnt_top
+	addi r7,1
+	
+        cmp neq r3,r4
+        br true >inc_prescaler
+        addi r3,1
+       
+	ret				//else
+	nop

@@ -1,0 +1,165 @@
+//big endian data memory test
+//after the initialization, should the LED become a value differnt from 0, an error occured
+reset:
+br always >main
+nop
+hardfault:
+reti
+nop
+memfault:
+reti
+nop
+
+.align
+pointer:
+.word =constants 
+
+constants:
+.word 256
+.word 0x00010203
+.word 0x04040404
+.word 0x000000FF
+
+main:
+	clr r10
+call_1:
+	clr r0	//error msg / state
+	call always >echo_error
+	nop
+	
+	ldr r11,>pointer	
+	ld32 r1,r11	//DMEM addr
+	addi r11,4
+	ld32 r2,r11
+	addi r11,4
+	ld32 r3,r11	//increment
+	addi r11,4
+	ld32 r8,r11	//mask
+
+	addi r11,-12
+
+	//test 1: store 32 bit, load bytes
+test1:
+	mov r4,r2
+	st32 r1,r4
+
+	addi r1,3	//check the LSB first
+
+	ld08 r6,r1	//r6: loaded value
+	and r5,r4,r8	//r5: masked constant
+	cmp neq r5,r6
+	call true >echo_error
+	addi r10,1
+
+	addi r1,-1
+	rsh r4,r4,8
+
+	ld08 r6,r1	//r6: loaded value
+	and r5,r4,r8	//r5: masked constant
+	cmp neq r5,r6
+	call true >echo_error
+	addi r10,1
+
+	addi r1,-1
+	rsh r4,r4,8
+
+	ld08 r6,r1	//r6: loaded value
+	and r5,r4,r8	//r5: masked constant
+	cmp neq r5,r6
+	call true >echo_error
+	addi r10,1
+
+	addi r1,-1
+	rsh r4,r4,8
+
+	ld08 r6,r1	//r6: loaded value
+	and r5,r4,r8	//r5: masked constant
+	cmp neq r5,r6
+	call true >echo_error
+	addi r10,1
+
+	//test 1 end
+
+	add r2,r2,r3
+	addi r1,4
+
+//test 2: store bytes, load word
+test2:
+	mov r4,r2
+	addi r1,3
+
+	st08 r1,r4
+	rsh r4,r4,8
+	addi r1,-1
+	st08 r1,r4
+	rsh r4,r4,8
+	addi r1,-1
+	st08 r1,r4
+	rsh r4,r4,8
+	addi r1,-1
+	st08 r1,r4
+	rsh r4,r4,8
+
+	ld32 r6,r1
+	cmp neq r6,r2
+	call true >echo_error
+	addi r10,1
+
+	ldr r9,>LEDaddr
+	st08 r9,r8
+
+//test 3
+//	prewrite memory with value==baseaddress+offset, 
+//	load 32 bit values and check if correct
+test3:
+	ld32 r1,r11	//DMEM base address
+	add r8,r1,r1 //out-of-range address, incidentally equals baseaddress*2 since baseaddress==length
+	clr r2
+test3_prewrite_mem_loop:
+	st08 r1,r2
+	addi r1,1
+	cmp neq r1,r8
+	br true >test3_prewrite_mem_loop
+	addi r2,1
+	
+	ld32 r1,r11	//DMEM addr
+	addi r11,4
+	ld32 r2,r11	//CMP value
+	addi r11,4
+	ld32 r3,r11	//increment
+	addi r11,-8
+	add r8,r1,r1 //out-of-range address, incidentally equals baseaddress*2 since baseaddress==length
+test3_loop:
+	ld32 r4,r1
+	cmp neq r4,r2
+	call true >echo_error
+	addi r0,1
+	
+	addi r1,4
+	add r2,r2,r3
+	
+	cmp neq r1,r8
+	br true >test3_loop
+	nop
+//end test3
+	
+end:
+	nop
+	br >end
+	nop
+
+.align
+LEDaddr:
+.word 0x000F0000
+
+//expects an error code in r0
+echo_error:
+	nop
+	ldr r9,>LEDaddr
+	st08 r9,r0
+	ret
+	nop
+
+
+
+

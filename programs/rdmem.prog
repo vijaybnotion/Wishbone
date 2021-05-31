@@ -1,0 +1,31 @@
+reset: br >main
+nop
+hardfault: reti
+nop
+memfault: reti
+nop
+
+.align
+adr_i0:	.word	0x001	//  (30b adr), actual adr at mem 0x004 (0x001<<2 bits)
+adr_a:	.word	0x3C0	//  (30b adr), actual adr at mem 0xF00 (0x3C0<<2 bits)
+adr_b:	.word	0x3F0	//  (30b adr), actual adr at mem 0xFC0 (0x3F0<<2 bits)
+
+
+main:
+clr r0
+clr r1
+clr r2
+clr r3
+
+//------------------------------
+// read only mem from ins addr range
+//------------------------------
+addi r3, 0x10 //32 bit adr 
+ld32 r0, r3 // val at addr 0x04 (30 bits) = 0x000003C0 (b0 = x00, b1 = x00, b2 = x03, b3 = xC0)
+add r1, r0, r0 //expected r1 = 0x3C0 + 0x3C0 = 780
+
+addi r4, 0x12 
+ld08 r5, r4	// get Byte2, r5 = 0x03
+
+end: br always >end
+nop

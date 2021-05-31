@@ -1,0 +1,101 @@
+reset:
+br always >main //branch to main routine
+nop
+hardfault:
+reti
+nop
+memfault:
+reti
+nop
+irq:
+br always >ISR
+nop
+
+.align
+stackp_addr:   //stack pointer initialization
+.word 0x00000500
+
+reg1:
+.word 0x000F0008
+reg2:
+.word 0x000F000C
+
+
+reg1_cnt:
+.word 0x0000001F
+
+reg2_cnt:
+.word 0x00000006
+
+
+regstatus:
+.word 0x00000000
+
+led_addr:
+.word 0x000F0000
+
+sw_addr:
+.word 0x000F0004
+
+//w_cnt_top:	.word 0x1FC000
+w_cnt_top:	.word 0x1		//for simulation only
+
+main:
+ldr r0,>led_addr	         //LED addr
+ldr r9,>sw_addr         //switch address
+ldr r12,>stackp_addr
+ldr r14,>regstatus      //clearing status register
+
+clr r6
+addi r6,8		//outer counter top
+clr r7			//wait counter
+clr r10
+clr r11
+ldr r8,>w_cnt_top
+
+ldr r2,>reg1
+ldr r1,>reg1_cnt
+ldr r3,>reg2
+ldr r4,>reg2_cnt
+
+st32 r2,r1
+st32 r3,r4
+clr r1
+
+
+loop1:
+br always >loop1
+nop
+
+
+ISR:
+
+fill:
+	cmp eq r5,r6
+	br true >flush
+	nop
+
+	addi r5,1
+	lsh r1,r1,1
+	addi r1,1
+	st08 r0,r1
+	reti
+	nop
+
+flush:
+	cmp eq r7,r6
+	br true >regclear
+	nop
+
+	addi r7,1
+	lsh r1,r1,1
+	st08 r0,r1
+	reti
+	nop
+	
+regclear:
+         clr r5
+         clr r7
+         br always >fill
+         nop	
+

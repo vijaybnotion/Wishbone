@@ -1,0 +1,439 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/msys/1.0/home/Ben/hiwi/esysoc/corewrap_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="config" />
+            <top_module name="corewrap_tb" />
+            <top_module name="lt16x32_global" />
+            <top_module name="lt16x32_internal" />
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+            <top_module name="wishbone" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/corewrap_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/in_imem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in_imem</obj_property>
+      <obj_property name="ObjectShortName">in_imem</obj_property>
+      <wvobject fp_name="/corewrap_tb/in_imem.read_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_data</obj_property>
+         <obj_property name="ObjectShortName">in_imem.read_data</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/in_imem.ready" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ready</obj_property>
+         <obj_property name="ObjectShortName">in_imem.ready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/in_proc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in_proc</obj_property>
+      <obj_property name="ObjectShortName">in_proc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/wmsti" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wmsti</obj_property>
+      <obj_property name="ObjectShortName">wmsti</obj_property>
+      <wvobject fp_name="/corewrap_tb/wmsti.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">wmsti.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/wmsti.ack" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ack</obj_property>
+         <obj_property name="ObjectShortName">wmsti.ack</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/out_imem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out_imem</obj_property>
+      <obj_property name="ObjectShortName">out_imem</obj_property>
+      <wvobject fp_name="/corewrap_tb/out_imem.read_addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_addr</obj_property>
+         <obj_property name="ObjectShortName">out_imem.read_addr</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/out_imem.read_en" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_en</obj_property>
+         <obj_property name="ObjectShortName">out_imem.read_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/out_proc" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out_proc</obj_property>
+      <obj_property name="ObjectShortName">out_proc</obj_property>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/hardfault" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">hardfault</obj_property>
+      <obj_property name="ObjectShortName">hardfault</obj_property>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/wmsto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wmsto</obj_property>
+      <obj_property name="ObjectShortName">wmsto</obj_property>
+   </wvobject>
+   <wvobject fp_name="/corewrap_tb/irq_lines" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">irq_lines[15:0]</obj_property>
+      <obj_property name="ObjectShortName">irq_lines[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="group72" type="group">
+      <obj_property name="label">core2wb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/rst" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/in_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_dmem</obj_property>
+         <obj_property name="ObjectShortName">in_dmem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/in_dmem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/in_dmem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_dmem</obj_property>
+         <obj_property name="ObjectShortName">out_dmem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.write_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_data</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.write_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_addr</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.write_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_size</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.write_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_en</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.read_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_size</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/out_dmem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsti" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wmsti</obj_property>
+         <obj_property name="ObjectShortName">wmsti</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsti.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">wmsti.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsti.ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">wmsti.ack</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wmsto</obj_property>
+         <obj_property name="ObjectShortName">wmsto</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">wmsto.adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">wmsto.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">wmsto.we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">wmsto.sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">wmsto.stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">wmsto.cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">wmsto.wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wmsto.wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">wmsto.wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">msto</obj_property>
+         <obj_property name="ObjectShortName">msto</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">msto.adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">msto.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">msto.we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">msto.sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">msto.stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">msto.cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">msto.wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/msto.wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">msto.wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/indmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">indmem</obj_property>
+         <obj_property name="ObjectShortName">indmem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/indmem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">indmem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/indmem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">indmem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core2wb_inst/wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">wbidx</obj_property>
+         <obj_property name="ObjectShortName">wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group62" type="group">
+      <obj_property name="label">Core</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/rst" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/stall" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">stall</obj_property>
+         <obj_property name="ObjectShortName">stall</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/in_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_dmem</obj_property>
+         <obj_property name="ObjectShortName">in_dmem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/in_dmem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/in_dmem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_dmem</obj_property>
+         <obj_property name="ObjectShortName">out_dmem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.write_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_data</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.write_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_addr</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.write_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_size</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.write_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_en</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.write_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.read_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_size</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_dmem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/in_imem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_imem</obj_property>
+         <obj_property name="ObjectShortName">in_imem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/in_imem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">in_imem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/in_imem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">in_imem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/out_imem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_imem</obj_property>
+         <obj_property name="ObjectShortName">out_imem</obj_property>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_imem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">out_imem.read_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/corewrap_tb/uut/core_inst/out_imem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">out_imem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/in_irq" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_irq</obj_property>
+         <obj_property name="ObjectShortName">in_irq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/out_irq" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_irq</obj_property>
+         <obj_property name="ObjectShortName">out_irq</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/hardfault" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">hardfault</obj_property>
+         <obj_property name="ObjectShortName">hardfault</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dp_cp_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dp_cp_signal</obj_property>
+         <obj_property name="ObjectShortName">dp_cp_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dp_dmem_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dp_dmem_signal</obj_property>
+         <obj_property name="ObjectShortName">dp_dmem_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dmem_dp_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dmem_dp_signal</obj_property>
+         <obj_property name="ObjectShortName">dmem_dp_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/imem_dec_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">imem_dec_signal</obj_property>
+         <obj_property name="ObjectShortName">imem_dec_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dec_cp_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dec_cp_signal</obj_property>
+         <obj_property name="ObjectShortName">dec_cp_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dec_imem_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dec_imem_signal</obj_property>
+         <obj_property name="ObjectShortName">dec_imem_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/cp_dp_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">cp_dp_signal</obj_property>
+         <obj_property name="ObjectShortName">cp_dp_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/cp_dmem_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">cp_dmem_signal</obj_property>
+         <obj_property name="ObjectShortName">cp_dmem_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/cp_dec_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">cp_dec_signal</obj_property>
+         <obj_property name="ObjectShortName">cp_dec_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/pc_dp_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_dp_signal</obj_property>
+         <obj_property name="ObjectShortName">pc_dp_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dp_pc_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dp_pc_signal</obj_property>
+         <obj_property name="ObjectShortName">dp_pc_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dec_pc_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dec_pc_signal</obj_property>
+         <obj_property name="ObjectShortName">dec_pc_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/pc_imem_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">pc_imem_signal</obj_property>
+         <obj_property name="ObjectShortName">pc_imem_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/cp_pc_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">cp_pc_signal</obj_property>
+         <obj_property name="ObjectShortName">cp_pc_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/irq_dec_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">irq_dec_signal</obj_property>
+         <obj_property name="ObjectShortName">irq_dec_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dec_irq_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dec_irq_signal</obj_property>
+         <obj_property name="ObjectShortName">dec_irq_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/dp_dec_signal" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dp_dec_signal</obj_property>
+         <obj_property name="ObjectShortName">dp_dec_signal</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/hardfault_dp" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">hardfault_dp</obj_property>
+         <obj_property name="ObjectShortName">hardfault_dp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/hardfault_cp" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">hardfault_cp</obj_property>
+         <obj_property name="ObjectShortName">hardfault_cp</obj_property>
+      </wvobject>
+      <wvobject fp_name="/corewrap_tb/uut/core_inst/stall_internal" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">stall_internal</obj_property>
+         <obj_property name="ObjectShortName">stall_internal</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

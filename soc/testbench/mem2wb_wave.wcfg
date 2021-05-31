@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/msys/1.0/home/Ben/hiwi/esysoc/mem2wb_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="config" />
+            <top_module name="lt16x32_global" />
+            <top_module name="lt16x32_internal" />
+            <top_module name="math_real" />
+            <top_module name="mem2wb_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+            <top_module name="wb_tp" />
+            <top_module name="wishbone" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="4" />
+   <wvobject fp_name="/mem2wb_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/mem2wb_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="group63" type="group">
+      <obj_property name="label">To mem</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/mem2wb_tb/wslvi" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wslvi</obj_property>
+         <obj_property name="ObjectShortName">wslvi</obj_property>
+         <wvobject fp_name="/mem2wb_tb/wslvi.adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">wslvi.adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvi.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">wslvi.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvi.we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">wslvi.we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvi.sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">wslvi.sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvi.stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">wslvi.stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvi.cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">wslvi.cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/mem2wb_tb/in_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_dmem</obj_property>
+         <obj_property name="ObjectShortName">in_dmem</obj_property>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.write_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_data</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.write_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_addr</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.write_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_size</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.write_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_en</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.read_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_size</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/in_dmem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group64" type="group">
+      <obj_property name="label">To wb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/mem2wb_tb/out_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_dmem</obj_property>
+         <obj_property name="ObjectShortName">out_dmem</obj_property>
+         <wvobject fp_name="/mem2wb_tb/out_dmem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/out_dmem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/mem2wb_tb/wslvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wslvo</obj_property>
+         <obj_property name="ObjectShortName">wslvo</obj_property>
+         <wvobject fp_name="/mem2wb_tb/wslvo.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">wslvo.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvo.ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">wslvo.ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvo.wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">wslvo.wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/mem2wb_tb/wslvo.wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">wslvo.wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+</wave_config>

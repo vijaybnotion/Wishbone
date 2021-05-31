@@ -1,0 +1,383 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/msys/1.0/home/Ben/hiwi/esysoc/memwrap_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="config" />
+            <top_module name="lt16x32_global" />
+            <top_module name="lt16x32_internal" />
+            <top_module name="math_real" />
+            <top_module name="memwrap_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+            <top_module name="wishbone" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/memwrap_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/in_imem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">in_imem</obj_property>
+      <obj_property name="ObjectShortName">in_imem</obj_property>
+      <wvobject fp_name="/memwrap_tb/in_imem.read_addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_addr</obj_property>
+         <obj_property name="ObjectShortName">in_imem.read_addr</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/in_imem.read_en" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_en</obj_property>
+         <obj_property name="ObjectShortName">in_imem.read_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/wslvi" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wslvi</obj_property>
+      <obj_property name="ObjectShortName">wslvi</obj_property>
+      <wvobject fp_name="/memwrap_tb/wslvi.adr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.adr</obj_property>
+         <obj_property name="ObjectShortName">wslvi.adr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvi.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">wslvi.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvi.we" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.we</obj_property>
+         <obj_property name="ObjectShortName">wslvi.we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvi.sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.sel</obj_property>
+         <obj_property name="ObjectShortName">wslvi.sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvi.stb" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.stb</obj_property>
+         <obj_property name="ObjectShortName">wslvi.stb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvi.cyc" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.cyc</obj_property>
+         <obj_property name="ObjectShortName">wslvi.cyc</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/out_imem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out_imem</obj_property>
+      <obj_property name="ObjectShortName">out_imem</obj_property>
+      <wvobject fp_name="/memwrap_tb/out_imem.read_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_data</obj_property>
+         <obj_property name="ObjectShortName">out_imem.read_data</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/out_imem.ready" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ready</obj_property>
+         <obj_property name="ObjectShortName">out_imem.ready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/fault" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">fault</obj_property>
+      <obj_property name="ObjectShortName">fault</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/out_byte" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/memwrap_tb/wslvo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">wslvo</obj_property>
+      <obj_property name="ObjectShortName">wslvo</obj_property>
+      <wvobject fp_name="/memwrap_tb/wslvo.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">wslvo.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvo.ack" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ack</obj_property>
+         <obj_property name="ObjectShortName">wslvo.ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvo.wbcfg" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbcfg</obj_property>
+         <obj_property name="ObjectShortName">wslvo.wbcfg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/wslvo.wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbidx</obj_property>
+         <obj_property name="ObjectShortName">wslvo.wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider55" type="divider">
+      <obj_property name="label">mem div</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group43" type="group">
+      <obj_property name="label">memdiv</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/rst" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/in_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_dmem</obj_property>
+         <obj_property name="ObjectShortName">in_dmem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/out_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_dmem</obj_property>
+         <obj_property name="ObjectShortName">out_dmem</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/in_imem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_imem</obj_property>
+         <obj_property name="ObjectShortName">in_imem</obj_property>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/in_imem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">in_imem.read_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/in_imem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">in_imem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/out_imem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_imem</obj_property>
+         <obj_property name="ObjectShortName">out_imem</obj_property>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/out_imem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">out_imem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/out_imem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">out_imem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/fault" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">fault</obj_property>
+         <obj_property name="ObjectShortName">fault</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/out_byte" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_byte[7:0]</obj_property>
+         <obj_property name="ObjectShortName">out_byte[7:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/memory" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">memory[0:255]</obj_property>
+         <obj_property name="ObjectShortName">memory[0:255]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/imem_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">imem_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">imem_data[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/dmem_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">dmem_data[31:0]</obj_property>
+         <obj_property name="ObjectShortName">dmem_data[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/dmem_read_fault" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">dmem_read_fault</obj_property>
+         <obj_property name="ObjectShortName">dmem_read_fault</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/dmem_write_fault" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">dmem_write_fault</obj_property>
+         <obj_property name="ObjectShortName">dmem_write_fault</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/imem_read_fault" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">imem_read_fault</obj_property>
+         <obj_property name="ObjectShortName">imem_read_fault</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/size" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">size</obj_property>
+         <obj_property name="ObjectShortName">size</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/imem_latency" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">imem_latency</obj_property>
+         <obj_property name="ObjectShortName">imem_latency</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/dmem_latency" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">dmem_latency</obj_property>
+         <obj_property name="ObjectShortName">dmem_latency</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/dmemsz" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">dmemsz</obj_property>
+         <obj_property name="ObjectShortName">dmemsz</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/imemsz" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">imemsz</obj_property>
+         <obj_property name="ObjectShortName">imemsz</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/width" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">width</obj_property>
+         <obj_property name="ObjectShortName">width</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/in_simulation" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">in_simulation</obj_property>
+         <obj_property name="ObjectShortName">in_simulation</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/in_synthesis" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">in_synthesis</obj_property>
+         <obj_property name="ObjectShortName">in_synthesis</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem_inst/filename" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">filename[1:25]</obj_property>
+         <obj_property name="ObjectShortName">filename[1:25]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider55" type="divider">
+      <obj_property name="label">mem2wb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group54" type="group">
+      <obj_property name="label">mem2wb</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/rst" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">in_dmem</obj_property>
+         <obj_property name="ObjectShortName">in_dmem</obj_property>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.write_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_data</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.write_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_addr</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.write_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_size</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.write_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_en</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.write_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_addr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.read_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_size</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/in_dmem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">in_dmem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/out_dmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">out_dmem</obj_property>
+         <obj_property name="ObjectShortName">out_dmem</obj_property>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/out_dmem.read_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_data</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.read_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/out_dmem.ready" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ready</obj_property>
+            <obj_property name="ObjectShortName">out_dmem.ready</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wslvi</obj_property>
+         <obj_property name="ObjectShortName">wslvi</obj_property>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi.adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">wslvi.adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">wslvi.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi.we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">wslvi.we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi.sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">wslvi.sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi.stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">wslvi.stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvi.cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">wslvi.cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wslvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wslvo</obj_property>
+         <obj_property name="ObjectShortName">wslvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">indmem</obj_property>
+         <obj_property name="ObjectShortName">indmem</obj_property>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.write_data" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_data</obj_property>
+            <obj_property name="ObjectShortName">indmem.write_data</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.write_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_addr</obj_property>
+            <obj_property name="ObjectShortName">indmem.write_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.write_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_size</obj_property>
+            <obj_property name="ObjectShortName">indmem.write_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.write_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.write_en</obj_property>
+            <obj_property name="ObjectShortName">indmem.write_en</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.read_addr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_addr</obj_property>
+            <obj_property name="ObjectShortName">indmem.read_addr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.read_size" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_size</obj_property>
+            <obj_property name="ObjectShortName">indmem.read_size</obj_property>
+         </wvobject>
+         <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/indmem.read_en" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.read_en</obj_property>
+            <obj_property name="ObjectShortName">indmem.read_en</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/memaddr" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">memaddr</obj_property>
+         <obj_property name="ObjectShortName">memaddr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/addrmask" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">addrmask</obj_property>
+         <obj_property name="ObjectShortName">addrmask</obj_property>
+      </wvobject>
+      <wvobject fp_name="/memwrap_tb/memwrap_inst/mem2wb_inst/wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">wbidx</obj_property>
+         <obj_property name="ObjectShortName">wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+</wave_config>

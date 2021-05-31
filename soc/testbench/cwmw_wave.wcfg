@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/msys/1.0/home/Ben/hiwi/esysoc/cwmw_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="config" />
+            <top_module name="cwmw_tb" />
+            <top_module name="lt16x32_global" />
+            <top_module name="lt16x32_internal" />
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+            <top_module name="wishbone" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="13" />
+   <wvobject fp_name="/cwmw_tb/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/out_byte" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">out_byte[7:0]</obj_property>
+      <obj_property name="ObjectShortName">out_byte[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/slvi" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slvi</obj_property>
+      <obj_property name="ObjectShortName">slvi</obj_property>
+      <wvobject fp_name="/cwmw_tb/slvi.adr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.adr</obj_property>
+         <obj_property name="ObjectShortName">slvi.adr</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvi.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">slvi.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvi.we" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.we</obj_property>
+         <obj_property name="ObjectShortName">slvi.we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvi.sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.sel</obj_property>
+         <obj_property name="ObjectShortName">slvi.sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvi.stb" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.stb</obj_property>
+         <obj_property name="ObjectShortName">slvi.stb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvi.cyc" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.cyc</obj_property>
+         <obj_property name="ObjectShortName">slvi.cyc</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/slvo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slvo</obj_property>
+      <obj_property name="ObjectShortName">slvo</obj_property>
+      <wvobject fp_name="/cwmw_tb/slvo.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">slvo.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvo.ack" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ack</obj_property>
+         <obj_property name="ObjectShortName">slvo.ack</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvo.wbcfg" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbcfg</obj_property>
+         <obj_property name="ObjectShortName">slvo.wbcfg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/slvo.wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbidx</obj_property>
+         <obj_property name="ObjectShortName">slvo.wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/msto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">msto</obj_property>
+      <obj_property name="ObjectShortName">msto</obj_property>
+      <wvobject fp_name="/cwmw_tb/msto.adr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.adr</obj_property>
+         <obj_property name="ObjectShortName">msto.adr</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.dat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.dat</obj_property>
+         <obj_property name="ObjectShortName">msto.dat</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.we" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.we</obj_property>
+         <obj_property name="ObjectShortName">msto.we</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.sel" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.sel</obj_property>
+         <obj_property name="ObjectShortName">msto.sel</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.stb" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.stb</obj_property>
+         <obj_property name="ObjectShortName">msto.stb</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.cyc" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.cyc</obj_property>
+         <obj_property name="ObjectShortName">msto.cyc</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.wbcfg" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbcfg</obj_property>
+         <obj_property name="ObjectShortName">msto.wbcfg</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/msto.wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">.wbidx</obj_property>
+         <obj_property name="ObjectShortName">msto.wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/core2mem" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">core2mem</obj_property>
+      <obj_property name="ObjectShortName">core2mem</obj_property>
+      <wvobject fp_name="/cwmw_tb/core2mem.read_addr" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_addr</obj_property>
+         <obj_property name="ObjectShortName">core2mem.read_addr</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/core2mem.read_en" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_en</obj_property>
+         <obj_property name="ObjectShortName">core2mem.read_en</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/mem2core" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mem2core</obj_property>
+      <obj_property name="ObjectShortName">mem2core</obj_property>
+      <wvobject fp_name="/cwmw_tb/mem2core.read_data" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">.read_data</obj_property>
+         <obj_property name="ObjectShortName">mem2core.read_data</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/cwmw_tb/mem2core.ready" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">.ready</obj_property>
+         <obj_property name="ObjectShortName">mem2core.ready</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/irq_lines" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">irq_lines[15:0]</obj_property>
+      <obj_property name="ObjectShortName">irq_lines[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/irq2core" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">irq2core</obj_property>
+      <obj_property name="ObjectShortName">irq2core</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/core2irq" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">core2irq</obj_property>
+      <obj_property name="ObjectShortName">core2irq</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/slv_mask_vector" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slv_mask_vector[0:15]</obj_property>
+      <obj_property name="ObjectShortName">slv_mask_vector[0:15]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/cwmw_tb/mst_mask_vector" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mst_mask_vector[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mst_mask_vector[0:3]</obj_property>
+   </wvobject>
+</wave_config>

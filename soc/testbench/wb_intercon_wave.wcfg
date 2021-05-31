@@ -1,0 +1,1889 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/msys/1.0/home/Ben/hiwi/esysoc/wb_intercon_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="config" />
+            <top_module name="lt16x32_global" />
+            <top_module name="math_real" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_textio" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="textio" />
+            <top_module name="txt_util" />
+            <top_module name="wb_intercon_tb" />
+            <top_module name="wb_tp" />
+            <top_module name="wishbone" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="28" />
+   <wvobject fp_name="/wb_intercon_tb/uut/clk" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/rst" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/slv_mask_vector" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slv_mask_vector[0:15]</obj_property>
+      <obj_property name="ObjectShortName">slv_mask_vector[0:15]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/mst_mask_vector" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mst_mask_vector[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mst_mask_vector[0:3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/req_mst_idx" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">req_mst_idx</obj_property>
+      <obj_property name="ObjectShortName">req_mst_idx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/msto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">msto[3:0]</obj_property>
+      <obj_property name="ObjectShortName">msto[3:0]</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/uut/msto[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">msto[3]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">msto[3].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">msto[3].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">msto[3].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">msto[3].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">msto[3].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">msto[3].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">msto[3].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[3].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">msto[3].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/msto[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">msto[2]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">msto[2].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">msto[2].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">msto[2].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">msto[2].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">msto[2].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">msto[2].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">msto[2].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[2].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">msto[2].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/msto[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">msto[1]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">msto[1].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">msto[1].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">msto[1].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">msto[1].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">msto[1].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">msto[1].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">msto[1].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[1].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">msto[1].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/msto[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">msto[0]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">msto[0].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">msto[0].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">msto[0].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">msto[0].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">msto[0].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">msto[0].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">msto[0].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msto[0].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">msto[0].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/slvo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slvo[15:0]</obj_property>
+      <obj_property name="ObjectShortName">slvo[15:0]</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">slvo[15]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[15].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[15].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[15].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[15].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[15].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[15].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[15].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[15].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">slvo[14]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[14].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[14].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[14].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[14].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[14].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[14].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[14].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[14].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">slvo[13]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[13].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[13].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[13].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[13].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[13].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[13].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[13].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[13].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">slvo[12]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[12].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[12].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[12].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[12].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[12].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[12].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[12].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[12].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">slvo[11]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[11].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[11].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[11].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[11].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[11].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[11].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[11].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[11].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">slvo[10]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[10].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[10].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[10].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[10].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[10].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[10].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[10].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[10].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">slvo[9]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[9].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[9].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[9].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[9].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[9].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[9].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[9].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[9].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">slvo[8]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[8].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[8].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[8].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[8].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[8].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[8].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[8].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[8].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">slvo[7]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[7].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[7].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[7].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[7].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[7].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[7].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[7].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[7].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">slvo[6]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[6].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[6].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[6].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[6].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[6].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[6].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[6].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[6].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">slvo[5]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[5].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[5].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[5].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[5].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[5].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[5].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[5].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[5].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">slvo[4]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[4].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[4].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[4].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[4].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[4].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[4].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[4].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[4].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">slvo[3]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[3].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[3].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[3].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[3].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[3].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[3].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[3].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[3].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">slvo[2]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[2].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[2].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[2].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[2].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[2].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[2].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[2].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[2].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">slvo[1]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[1].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[1].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[1].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[1].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[1].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[1].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[1].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[1].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvo[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">slvo[0]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[0].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo[0].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[0].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo[0].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[0].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo[0].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvo[0].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo[0].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider303" type="divider">
+      <obj_property name="label">gmst / ssel</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmpmsto[3:0]</obj_property>
+      <obj_property name="ObjectShortName">tmpmsto[3:0]</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">tmpmsto[3]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[3].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[3].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">tmpmsto[2]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[2].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[2].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">tmpmsto[1]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].adr</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[1].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[1].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">tmpmsto[0]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].cyc</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].wbcfg</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpmsto[0].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpmsto[0].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">tmpslvo[15:0]</obj_property>
+      <obj_property name="ObjectShortName">tmpslvo[15:0]</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[15]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[15].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[15].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[15].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[15].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[15].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[15].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[15].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[15].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[14]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[14].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[14].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[14].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[14].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[14].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[14].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[14].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[14].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[13]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[13].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[13].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[13].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[13].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[13].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[13].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[13].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[13].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[12]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[12].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[12].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[12].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[12].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[12].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[12].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[12].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[12].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[11]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[11].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[11].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[11].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[11].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[11].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[11].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[11].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[11].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[10]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[10].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[10].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[10].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[10].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[10].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[10].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[10].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[10].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[9]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[9].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[9].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[9].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[9].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[9].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[9].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[9].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[9].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[8]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[8].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[8].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[8].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[8].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[8].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[8].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[8].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[8].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[7]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[7].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[7].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[7].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[7].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[7].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[7].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[7].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[7].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[6]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[6].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[6].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[6].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[6].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[6].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[6].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[6].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[6].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[5]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[5].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[5].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[5].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[5].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[5].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[5].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[5].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[5].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[4]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[4].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[4].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[4].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[4].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[4].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[4].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[4].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[4].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[3]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[3].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[3].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[3].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[3].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[3].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[3].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[3].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[3].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[2]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[2].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[2].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[2].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[2].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[2].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[2].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[2].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[2].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[1]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[1].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[1].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[1].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[1].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[1].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[1].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[1].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[1].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">tmpslvo[0]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[0].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[0].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[0].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[0].ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[0].wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[0].wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/tmpslvo[0].wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">tmpslvo[0].wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider82" type="divider">
+      <obj_property name="label">O u t p u t</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/led1" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led1[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led1[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/led" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">led[7:0]</obj_property>
+      <obj_property name="ObjectShortName">led[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/msti" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">msti[3:0]</obj_property>
+      <obj_property name="ObjectShortName">msti[3:0]</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/uut/msti[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">msti[3]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/msti[3].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">msti[3].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/msti[3].ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">msti[3].ack</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/msti[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">msti[2]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/msti[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">msti[1]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/msti[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">msti[0]</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/slvi" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">slvi[15:0]</obj_property>
+      <obj_property name="ObjectShortName">slvi[15:0]</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[15]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[15]</obj_property>
+         <obj_property name="ObjectShortName">slvi[15]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[15].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[15].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[15].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[15].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[15].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[15].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[15].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[15].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[15].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[15].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[15].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[15].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[14]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[14]</obj_property>
+         <obj_property name="ObjectShortName">slvi[14]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[14].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[14].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[14].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[14].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[14].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[14].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[14].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[14].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[14].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[14].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[14].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[14].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[13]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[13]</obj_property>
+         <obj_property name="ObjectShortName">slvi[13]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[13].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[13].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[13].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[13].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[13].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[13].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[13].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[13].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[13].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[13].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[13].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[13].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[12]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[12]</obj_property>
+         <obj_property name="ObjectShortName">slvi[12]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[12].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[12].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[12].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[12].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[12].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[12].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[12].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[12].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[12].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[12].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[12].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[12].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[11]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[11]</obj_property>
+         <obj_property name="ObjectShortName">slvi[11]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[11].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[11].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[11].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[11].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[11].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[11].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[11].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[11].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[11].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[11].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[11].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[11].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[10]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[10]</obj_property>
+         <obj_property name="ObjectShortName">slvi[10]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[10].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[10].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[10].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[10].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[10].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[10].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[10].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[10].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[10].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[10].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[10].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[10].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[9]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[9]</obj_property>
+         <obj_property name="ObjectShortName">slvi[9]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[9].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[9].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[9].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[9].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[9].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[9].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[9].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[9].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[9].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[9].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[9].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[9].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[8]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[8]</obj_property>
+         <obj_property name="ObjectShortName">slvi[8]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[8].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[8].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[8].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[8].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[8].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[8].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[8].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[8].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[8].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[8].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[8].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[8].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[7]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[7]</obj_property>
+         <obj_property name="ObjectShortName">slvi[7]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[7].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[7].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[7].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[7].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[7].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[7].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[7].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[7].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[7].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[7].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[7].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[7].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[6]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[6]</obj_property>
+         <obj_property name="ObjectShortName">slvi[6]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[6].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[6].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[6].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[6].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[6].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[6].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[6].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[6].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[6].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[6].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[6].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[6].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[5]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[5]</obj_property>
+         <obj_property name="ObjectShortName">slvi[5]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[5].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[5].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[5].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[5].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[5].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[5].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[5].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[5].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[5].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[5].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[5].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[5].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[4]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[4]</obj_property>
+         <obj_property name="ObjectShortName">slvi[4]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[4].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[4].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[4].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[4].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[4].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[4].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[4].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[4].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[4].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[4].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[4].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[4].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[3]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[3]</obj_property>
+         <obj_property name="ObjectShortName">slvi[3]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[3].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[3].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[3].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[3].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[3].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[3].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[3].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[3].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[3].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[3].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[3].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[3].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[2]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[2]</obj_property>
+         <obj_property name="ObjectShortName">slvi[2]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[2].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[2].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[2].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[2].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[2].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[2].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[2].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[2].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[2].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[2].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[2].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[2].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[1]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[1]</obj_property>
+         <obj_property name="ObjectShortName">slvi[1]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[1].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[1].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[1].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[1].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[1].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[1].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[1].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[1].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[1].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[1].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[1].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[1].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/uut/slvi[0]" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">[0]</obj_property>
+         <obj_property name="ObjectShortName">slvi[0]</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[0].adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi[0].adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[0].dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi[0].dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[0].we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi[0].we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[0].sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi[0].sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[0].stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi[0].stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/uut/slvi[0].cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi[0].cyc</obj_property>
+         </wvobject>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider285" type="divider">
+      <obj_property name="label">Reg</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/mgnt_idx" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">mgnt_idx</obj_property>
+      <obj_property name="ObjectShortName">mgnt_idx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/mgnt" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">mgnt[0:3]</obj_property>
+      <obj_property name="ObjectShortName">mgnt[0:3]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/ssel_idx" type="other" db_ref_id="1">
+      <obj_property name="ElementShortName">ssel_idx</obj_property>
+      <obj_property name="ObjectShortName">ssel_idx</obj_property>
+   </wvobject>
+   <wvobject fp_name="/wb_intercon_tb/uut/ssel" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">ssel[0:15]</obj_property>
+      <obj_property name="ObjectShortName">ssel[0:15]</obj_property>
+   </wvobject>
+   <wvobject fp_name="divider494" type="divider">
+      <obj_property name="label">slv_test_rd</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group618" type="group">
+      <obj_property name="label">s_test_rd_0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/srd00/slvi" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvi</obj_property>
+         <obj_property name="ObjectShortName">slvi</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/slvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvo</obj_property>
+         <obj_property name="ObjectShortName">slvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/test_rddat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/wbslvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wbslvo</obj_property>
+         <obj_property name="ObjectShortName">wbslvo</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/srd00/wbslvo.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">wbslvo.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd00/wbslvo.ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">wbslvo.ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd00/wbslvo.wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">wbslvo.wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd00/wbslvo.wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">wbslvo.wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/memaddr" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">memaddr</obj_property>
+         <obj_property name="ObjectShortName">memaddr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/addrmask" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">addrmask</obj_property>
+         <obj_property name="ObjectShortName">addrmask</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd00/wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">wbidx</obj_property>
+         <obj_property name="ObjectShortName">wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group609" type="group">
+      <obj_property name="label">s_test_rd_1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/srd01/slvi" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvi</obj_property>
+         <obj_property name="ObjectShortName">slvi</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/slvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvo</obj_property>
+         <obj_property name="ObjectShortName">slvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/test_rddat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">test_rddat[31:0]</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/wbslvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wbslvo</obj_property>
+         <obj_property name="ObjectShortName">wbslvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/memaddr" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">memaddr</obj_property>
+         <obj_property name="ObjectShortName">memaddr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/addrmask" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">addrmask</obj_property>
+         <obj_property name="ObjectShortName">addrmask</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd01/wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">wbidx</obj_property>
+         <obj_property name="ObjectShortName">wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group989" type="group">
+      <obj_property name="label">s_test_rd05</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/srd05/clk" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">clk</obj_property>
+         <obj_property name="ObjectShortName">clk</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/rst" type="logic" db_ref_id="1">
+         <obj_property name="ElementShortName">rst</obj_property>
+         <obj_property name="ObjectShortName">rst</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/slvi" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvi</obj_property>
+         <obj_property name="ObjectShortName">slvi</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/srd05/slvi.adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi.adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd05/slvi.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi.dat</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd05/slvi.we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi.we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd05/slvi.sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi.sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd05/slvi.stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi.stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd05/slvi.cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi.cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/slvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvo</obj_property>
+         <obj_property name="ObjectShortName">slvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/test_rddat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/wbslvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wbslvo</obj_property>
+         <obj_property name="ObjectShortName">wbslvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/memaddr" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">memaddr</obj_property>
+         <obj_property name="ObjectShortName">memaddr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/addrmask" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">addrmask</obj_property>
+         <obj_property name="ObjectShortName">addrmask</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd05/wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">wbidx</obj_property>
+         <obj_property name="ObjectShortName">wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="group544" type="group">
+      <obj_property name="label">s_test_rd15</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <wvobject fp_name="/wb_intercon_tb/srd15/slvi" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvi</obj_property>
+         <obj_property name="ObjectShortName">slvi</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvi.adr" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.adr</obj_property>
+            <obj_property name="ObjectShortName">slvi.adr</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvi.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvi.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvi.we" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.we</obj_property>
+            <obj_property name="ObjectShortName">slvi.we</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvi.sel" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.sel</obj_property>
+            <obj_property name="ObjectShortName">slvi.sel</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvi.stb" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.stb</obj_property>
+            <obj_property name="ObjectShortName">slvi.stb</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvi.cyc" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.cyc</obj_property>
+            <obj_property name="ObjectShortName">slvi.cyc</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/slvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">slvo</obj_property>
+         <obj_property name="ObjectShortName">slvo</obj_property>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvo.dat" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.dat</obj_property>
+            <obj_property name="ObjectShortName">slvo.dat</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvo.ack" type="logic" db_ref_id="1">
+            <obj_property name="ElementShortName">.ack</obj_property>
+            <obj_property name="ObjectShortName">slvo.ack</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvo.wbcfg" type="array" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbcfg</obj_property>
+            <obj_property name="ObjectShortName">slvo.wbcfg</obj_property>
+            <obj_property name="Radix">HEXRADIX</obj_property>
+         </wvobject>
+         <wvobject fp_name="/wb_intercon_tb/srd15/slvo.wbidx" type="other" db_ref_id="1">
+            <obj_property name="ElementShortName">.wbidx</obj_property>
+            <obj_property name="ObjectShortName">slvo.wbidx</obj_property>
+         </wvobject>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/test_rddat" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="ObjectShortName">test_rddat[31:0]</obj_property>
+         <obj_property name="Radix">HEXRADIX</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/state" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">state</obj_property>
+         <obj_property name="ObjectShortName">state</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/wbslvo" type="array" db_ref_id="1">
+         <obj_property name="ElementShortName">wbslvo</obj_property>
+         <obj_property name="ObjectShortName">wbslvo</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/memaddr" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">memaddr</obj_property>
+         <obj_property name="ObjectShortName">memaddr</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/addrmask" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">addrmask</obj_property>
+         <obj_property name="ObjectShortName">addrmask</obj_property>
+      </wvobject>
+      <wvobject fp_name="/wb_intercon_tb/srd15/wbidx" type="other" db_ref_id="1">
+         <obj_property name="ElementShortName">wbidx</obj_property>
+         <obj_property name="ObjectShortName">wbidx</obj_property>
+      </wvobject>
+   </wvobject>
+   <wvobject fp_name="divider482" type="divider">
+      <obj_property name="label">slv_test_wr</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+      <obj_property name="BkColor">128 128 255</obj_property>
+      <obj_property name="TextColor">230 230 230</obj_property>
+   </wvobject>
+   <wvobject fp_name="group471" type="group">
+      <obj_property name="label">s_test_wr_0</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+   <wvobject fp_name="group481" type="group">
+      <obj_property name="label">s_test_wr_1</obj_property>
+      <obj_property name="DisplayName">label</obj_property>
+   </wvobject>
+</wave_config>

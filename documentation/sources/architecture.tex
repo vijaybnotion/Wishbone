@@ -1,0 +1,179 @@
+\chapter{Processor Architecture}
+\section{Block Diagram}
+A simplified block diagram of the \procname can be found in Figure \ref{fig:blockdiagram_core}.
+A diagram of the datapath can be found in Figure \ref{fig:blockdiagram_dp}
+
+\begin{figure}[htb]
+	\centering
+	\includegraphics[scale=0.5]{./figures/block_core.pdf}
+	\caption{Simplified Block diagram of core architecture with surrounding entities}
+	\label{fig:blockdiagram_core}
+\end{figure}
+\begin{sidewaysfigure}[htb]
+	\centering
+	\includegraphics[scale=0.6]{./figures/block_dp.pdf}
+	\caption{Block diagram of the datapath}
+	\label{fig:blockdiagram_dp}
+	Pipeline registers in gray, for reasons of clarity, not all signals are included.
+\end{sidewaysfigure}
+
+\section{Configuration}
+\label{sec:config}
+Easy ways to configure the \procname can be found in package \inlinevhdl{lt16x32\_internal} (see Listing \ref{lst:configcode_internal}) and in package \inlinevhdl{lt16x32$\_$global} (see Listing \ref{lst:configcode_global}).
+
+\begin{vhdl}[Possible Configurations in internal package]{lst:configcode_internal}
+-- execute branch delay slot. if set to true,
+-- the first operation behind any type of branch
+-- is executed. if set to false, stalls are inserted
+constant execute_branch_delay_slot : boolean := TRUE;
+-- register width
+constant reg_width                 : integer := 32;
+-- pc width (should be smaller or equal to register width)
+constant pc_width                  : integer := 32;
+\end{vhdl}
+
+\begin{vhdl}[Possible Configurations in global package]{lst:configcode_global}
+-- width of the vector holding the interrupt
+-- number, maximum 7 due to processor architecture
+constant irq_num_width             : integer := 4;
+-- width of the vector holding the interrupt
+-- priority, maximum 6 due to processor architecture
+constant irq_prio_width            : integer := 4;
+\end{vhdl}
+
+Currently, three values can be configured:
+\paragraph{Branch delay slot}
+\label{sec:branchdelayslot}
+If the constant \inlinevhdl{execute$\_$branch$\_$delay$\_$slot} is set to \inlinevhdl{true}, the instruction behind a branch instruction is always executed.
+If the constant is set to \inlinevhdl{false}, a \inlineasm{nop} is inserted if a branch is performed.
+By default, the branch delay slot is always executed.
+
+Pay attention that even if the branch is not yet taken in the branch delay slot, the program counter may contain the new address.
+Hence, instructions using the program counter should not be placed in the branch delay slot.
+This also means, that storing the current address for function returns can not be done in the branch delay slot.
+Instead, use the \inlinevhdl{call} instruction for this purpose.
+\paragraph{Register width}
+With the constant \inlinevhdl{reg$\_$width} the width of the internal registers can be set. Valid values are 8, 16 and 32, by default 32bits are used.
+\paragraph{PC width}
+With the constant \inlinevhdl{pc$\_$width} the width of the program counter can be set.
+Valid values are 8, 16 and 32, it must be smaller or equal to the register width.
+By default, 32bits are used.
+\paragraph{Interrupt Number Width}
+This constant holds the width of the interrupt number, values between 1 and 7 are valid.
+This determines the number of possible interrupts.
+By default, 4bits are used, allowing $2^4 = 16$ interrupts. 
+\begin{equation*}
+\text{Possible Interrupts} = 2^{(\text{Width})}
+\end{equation*}
+\paragraph{Interrupt Priority Width}
+\label{sec:config_priowidth}
+This constant determines the width of the runtime/interrupt priority, values between 1 and 6 are valid.
+By default, 16 levels of priority are allowed.
+One additional bit is supported by the use of non-maskable interrupts (NMI, see Section \ref{sec:nmi}).
+
+\section{Pipeline Stages}
+As shown in Figure \ref{fig:blockdiagram_dp}, the processor has three pipeline stages.
+Due to this scheme, there is a delay between reading the instruction and changing data in the (register) memory of three clock cycles.
+
+\paragraph{Stage 1: Decode/Setup}
+In the first stage, the instruction is fetched from the instruction memory and decoded. Also, the needed register contents are loaded from the register file.
+\paragraph{Stage 2: Load and Execute}
+In this stage, the ALU is performing the operation and data is read from the data memory.
+\paragraph{Stage 3: Writeback}
+Data is written back to the register file and written to the data memory.
+Possible sources for this data are the data read from the memory in the last clock cycle or the contents of register b.
+
+\section{Registers}
+The \procname has 16 registers, 14 of which can be used as general purpose registers.
+The other four have special functions, VHDL defines are given in Listing \ref{lst:vhdl_regnumbers} and can be found in the \inlinevhdl{lt16x32\_internal} package.
+
+\begin{vhdl}[Constant Defines for the Special Purpose Registers]{lst:vhdl_regnumbers}
+-- register number for stack pointer
+constant sp_num : reg_number := to_reg_number(12);
+-- register number for link register
+constant lr_num : reg_number := to_reg_number(13);
+-- register number for status register
+constant sr_num : reg_number := to_reg_number(14);
+-- register number for pc register
+constant pc_num : reg_number := to_reg_number(15);
+\end{vhdl}
+
+\subsection{General Purpose Registers}
+Registers \inlineasm{r0} to \inlineasm{r11} can be used without special consideration as general purpose registers.
+Registers \inlineasm{r12} (stack pointer) and \inlineasm{r13} (link register) can also be used as general purpose register but are additionally altered with special instructions.
+\subsection{Stack Pointer}
+The stack pointer (\inlineasm{r12}) is used when jumping into or out of interrupt handlers (i.e. external interrupts or \inlineasm{trap} instructions and \inlineasm{reti}).
+It must be set to the correct address of the stack, before any interrupt is allowed to occur.
+In the default configuration, stack grows downwards.
+The stack pointer should be word-aligned at all times.
+
+The interpretation of the stack pointer is always 'The current stack pointer points to the topmost element on the stack'.
+When interfacing the stack pointer manually, always adhere to the following rules:
+\begin{itemize}
+\nolistskip
+\item When writing to the stack (push), always decrement the stack before writing your element.
+\item When reading from the stack (pop), read your element, then increment the stack pointer.
+\end{itemize}
+Only when adhering to these rules the integrity of the stack can be ensured.
+
+The initial stack pointer position does not need to be a memory address,
+but the word address below it needs to be valid.
+
+\subsection{Link Register}
+The link register (\inlineasm{r13}) is set by the \inlineasm{call} instruction.
+This allows for flexible function returns using the pseudo instruction \inlineasm{ret} (a branch to the link register).
+\subsection{Status Register r14}
+The status register is a special 32bit register.
+The register contents are displayed in table \ref{tbl:SR}, reserved bits always read zero and should be written to as zeroes for future compatibility.
+\begin{table}
+\center
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline 
+31 & 30 & 29 & 28 & 27 & 26 & 25 & 24 & 23 & 22 & 21 & 20 & 19 & 18 & 17 & 16\\ 
+\hline 
+\multicolumn{16}{|c|}{reserved}\\
+\hline
+\multicolumn{16}{c}{}\\
+\hline 
+15 & 14 & 13 & 12 & 11 & 10 & 9 & 8 & 7 & 6 & 5 & 4 & 3 & 2 & 1 & 0 \\
+\hline 
+\multicolumn{8}{|c|}{reserved} & \multicolumn{6}{|c|}{priority} & T & O \\
+\hline
+\end{tabular}
+\caption{Status Register Contents}
+\label{tbl:SR}
+\end{table}
+
+\subsubsection{Runtime Priority - SR[7-2]}
+Bits seven to two define the current runtime priority, larger numbers mean higher priority. The priority is left aligned.
+With a runtime priority width configured to four bits, the priority is stored in bits seven to four and the other bits read zero.
+Writes to not used priority bits are discarded.
+
+\subsubsection{Truthflag - SR[1]}
+Bit one is the truth flag, which can be set/reset by compare instructions and are used for conditional branches and calls.
+Also, the truth flag can be set manually by writing to the status register.
+
+\subsubsection{Overflowflag - SR[0]}
+Bit zero is the overflow flag, which is set by arithmetic instructions, such as addition and subtraction.
+
+In additions an overflow has occured, if both operands are the same sign and the result's sign is different (i.e. $5 + 6 < 0$ or $(-5) + (-7) > 0$, listing \ref{lst:ovf_add}).
+In subtractions an overflow occured, if both operands are from opposing sign and the minuend's sign differ from the result's (i.e. $(-8) - 5 > 0$ or $5 - (-4) < 0$, listing \ref{lst:ovf_sub}).
+This follows normal rules for signed calculations, which are as well used in other processor designs. 
+
+\begin{vhdl}[Overflow Generation for Addition]{lst:ovf_add}
+c_out <= (in_a(reg_width-1)     AND in_b(reg_width-1)
+                                AND not result(reg_width-1))
+
+      OR (not in_a(reg_width-1) AND not in_b(reg_width-1)
+                                AND result(reg_width-1));	
+\end{vhdl}
+\begin{vhdl}[Overflow Generation for Subtraction]{lst:ovf_sub}
+c_out <= (in_a(reg_width-1)     AND not in_b(reg_width-1)
+                                AND not result(reg_width-1))
+
+      OR (not in_a(reg_width-1) AND in_b(reg_width-1)
+                                AND result(reg_width-1));
+\end{vhdl}
+
+\subsection{Program Counter}
+Register \inlineasm{r15} is reserved for the program counter and is read only from the user interface. Write accesses are ignored. It may be altered with special instructions such as branch and call and in interrupt request situations by the processor itself.

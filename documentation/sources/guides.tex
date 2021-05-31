@@ -1,0 +1,164 @@
+\chapter{Guides}
+
+\section{How to implement a lookup or branch table}
+Due to the limitation of the \verb=ldr= instruction,
+addressing large fields of constants with it is not feasible,
+especially if those constants are refered to by more than one part of the program.
+
+This can be circumvented by using the assemblers directive \verb|=labelname| to store a pointer to a labels location (See Section~\ref{sec:AssemblerDirectives}).
+Pointers to data in memory can be stored conviently close to an \verb=ldr= instruction, 
+making the access to the memory content via a pointer based load or store instruction possible.
+
+The most common use of this mechanic is the lookup table.
+An example is given in Listing~\ref{lst:ldr_useage}.
+
+\begin{asm}[Example on indirect LDR use]{lst:ldr_useage}
+.align
+lookup_table:
+    .word 0x0001
+    .word 0x0010
+//...
+// large amounts of code and/or data
+//...
+
+.align
+lookuptable_ptr: 
+    .word =lookup_table
+//...
+    ldr rX , >lookuptable_ptr
+//...
+    ld32 rY,rX // load from pointer
+    addi rX, 4
+    ld32 rZ,rX // load from pointer with offset
+//...
+\end{asm}
+
+\clearpage
+\section{How to test a design using the CAN test package}
+%Designs that use a CAN controller as a peripheral device, are often complex and therefor hard to debug. 
+%This is especially true, if providing valid input data via the CAN bus is necessary in order to verify correct behavior.
+The platform includes a foreign CAN controller IP component. 
+To ease integration and testing, a test package is provided with the platform source code.
+With its help, input data and behavior of a CAN network can be modeled more easily.
+
+The test package is located in \verb=can_tp.vhd= and a application demonstration is given as a testbench in \verb=can_demo_tb.vhd= in the testbench directory.
+
+In this guide, two approaches on verifying a design are presented.
+
+%In those situations, the need for tools occurs, that reliably provide input data and model the behavior of a CAN network,
+%connected to the designs CAN interface. 
+%The CAN test package is a collection of VHDL functions and procedures that implement such tools. 
+%And this guide will explain their proper use.
+
+%There are two basic approaches, recommended by this guide, on how to do so. 
+%They are described in the two following parts. 
+%The third part gives some hints on how to use these methods in a test bench.
+
+
+
+\subsection{Simulating a CAN transmission}
+The first approach focuses on generating CAN transmissions, that can be used as input for the design under test. This is achieved by unsing the procedure \verb=simulate_can_transmission= (Listing ~\ref{lst:interface_01}), which is configurable to any data and timing, your CAN interface uses. The user has not to worry about bit stuffing, crc and error detection.
+
+The \verb=id= and \verb=data= parameters are bit vectors (\verb=std_logic_vector=) that specify the CAN ID and DATA bits of the message.
+
+The actual length of the data part is configurable by the \verb=datasize= parameter. It is an integer specifying the amount of Bytes of the \verb=data= parameter, that will be included in the CAN transmission. The rest of \verb=data= will simply be ignored.
+
+The timing is controlled by the \verb=t_bit= parameter, which is of VDHL type time.
+It stands for the correct overall length of one CAN symbol (this value has to be calculated from the timing configuration of the tested CAN controller).
+
+The \verb=rx= and \verb=tx= signals have to be connected to a simulated CAN bus. See Section ~\ref{subsec:int_tb} for more information. The signal \verb=tx= is the actual output of the procedure.
+
+The \verb=test_result= parameter is a diagnostic output of an enumeration type that shows whether the transmission was successful, a CAN error occurs, the arbitration is lost or whether the tested CAN controller is not acknowledging the transmission.
+
+\begin{vhdl}[Interface]{lst:interface_01}
+procedure simulate_can_transmission(
+        constant id 		: in std_logic_vector(10 downto 0);
+        constant data		: in std_logic_vector (0 to 63);
+        constant datasize	: in integer;
+        constant t_bit		: in time;
+        signal rx			: in std_logic;
+        signal tx			: inout std_logic;
+        signal test_result	: out rx_check_result)
+\end{vhdl}
+
+\subsection{Creating a test network}
+While the first approach is limited to transmitting can messages, this one aims at providing one or more fully functioning can nodes in a test network. Each node is implemented by an instantiation of \verb=can_vhdl_top=, but instead of steering them with a LT16soc design, functions of the can test package will do the job:
+
+If a certain register in a CAN node should be written to, the procedure \verb=can_wb_write_reg= (Listing ~\ref{lst:interface_02}) comes in handy. Its parameter signals \verb=wbs_in= and \verb=wbs_out= must be connected to the CAN controller's Wishbone interface. The parameter \verb=addr= is an integer specifying the target register of the write and the parameter data is a bit vector containing the data. And finally a clock signal \verb=clk= is needed as input, in order to write to the CAN controller. (This must be the same clock used for operating the CAN node.)
+
+\begin{vhdl}[Interface]{lst:interface_02}
+procedure can_wb_write_reg(
+        signal wbs_in 	: out wb_slv_in_type;
+        signal wbs_out 	: in wb_slv_out_type;
+        constant addr 	: integer;
+        constant data	: in std_logic_vector(7 downto 0);
+		signal clk 		: in std_logic)
+\end{vhdl}
+
+For extracting certain register contents, the procedure \verb=can_wb_read_reg= (Listing ~\ref{lst:interface_03}) is provided. It is used with the same parameters like \verb=can_wb_write_reg=, except a data input bit vector. Instead, a data output signal is provided, to access the read register contents.
+
+\begin{vhdl}[Interface]{lst:interface_03}
+procedure can_wb_read_reg(
+        signal wbs_in 	: out wb_slv_in_type;
+        signal wbs_out 	: in wb_slv_out_type;
+        constant addr 	: integer;
+        signal data		: out std_logic_vector(7 downto 0);
+        signal clk 		: in std_logic)
+\end{vhdl}
+
+If successive writes are needed, the procedure \verb=write_regs_from_file= (Listing ~\ref{lst:interface_04}) is a convenient way to do this. The first Parameter is a path to a text file. Each line in the file stands for a CAN register, that should be written, and consits of a integer for the desired target register number and eight binary digits ('0' or '1') for the data. Both numbers are separated by one SPACE. See ~\ref{lst:default_setup} for an example.
+
+\begin{vhdl}[Interface]{lst:interface_04}
+    procedure write_regs_from_file(   
+        constant filename 	: in string;
+        signal wbs_in 		: out wb_slv_in_type;
+        signal wbs_out 		: in wb_slv_out_type;
+        signal       clk 	: in std_logic)
+\end{vhdl}
+
+Successive reading can be done in a similar way with \verb=read_regs_with_fileaddr= (Listing ~\ref{lst:interface_05}). Here, the data part in each line of the file is ignored. If the registers written to should be read, the same file can be used. The parameter \verb=out_filename= determines an additional file, that is used to store the read register contents.
+
+\begin{vhdl}[Interface]{lst:interface_05}
+procedure read_regs_with_fileaddr(   
+        constant filename 		: in string;
+        constant out_filename 	: in string;
+        signal wbs_in 			: out wb_slv_in_type;
+        signal wbs_out 			: in wb_slv_out_type;
+        signal clk 				: in std_logic)
+\end{vhdl}
+
+
+\subsection{Integrating the approaches in a test bench}
+\label{subsec:int_tb}
+In order to use the two presented approaches in a test bench, some details have to be considered:
+
+\begin{itemize}
+\item Connecting CAN nodes or transmitting custom messages requires the simulation of a CAN network. A VHDL design that does exactly this is provided: \verb=phys_can_sim= (Listing ~\ref{lst:interface_06}). The individual tx and rx signals of the connected can nodes are merged into two vectors. Thier size is determind by the generic parameter \verb=peer_num=, which should be equal to the number of clients connected to the CAN network.
+\item When using the \verb=simulate_can_transmission= procedure, the \verb=tx= signal is only handled while the procedure is working. For all other times the signal has to be assigned manually.
+\item When simulating the test bench with ISim, the relative file path in \verb=write_regs_from_file= and \verb=read_regs_with_fileaddr= has its root in the project folder. An example file, containing initialization data for a can node is shown in Listing ~\ref{lst:default_setup}.
+\item When instantiating \verb=can_vhdl_top= (a CAN node without a lt16soc), do not forget to initialize its \verb=wbs_in= port signal porperly. This can be done by assigning the constant \verb=wbs_in_default= from the CAN test package to it.
+\item A demo test bench using all the mechanics described in the two approaches is provided: \verb=can_demo_tb=.
+\end{itemize}
+
+
+\begin{vhdl}[Interface]{lst:interface_06}
+entity phys_can_sim 
+		generic(
+			peer_num : integer );
+		port(
+			rst : in std_logic;
+			rx_vector : out std_logic_vector(peer_num - 1 downto 0);
+			tx_vector : in std_logic_vector(peer_num - 1 downto 0) );
+end entity phys_can_sim;
+\end{vhdl}
+
+
+
+\begin{vhdl}[default\_setup.tdf]{lst:default_setup}
+4 00000000
+5 11111111
+6 10000000
+7 01001000
+8 00000010
+0 11111110
+\end{vhdl}

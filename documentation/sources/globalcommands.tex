@@ -1,0 +1,130 @@
+%%%%%%%%%%%%
+%%% MINTED
+%%%%%%%%%%%%
+
+\DeclareFloatingEnvironment[
+  fileext=loc,
+  listname=List of Listings,
+  name=Listing,
+  placement=htp,
+]{codefloat}
+
+\newenvironment{vhdl}[2][]
+ {\codefloat[htb]
+  \if\relax\detokenize{#1}\relax\else\caption{#1}\fi
+  \if\relax\detokenize{#2}\relax\else\label{#2}\fi 
+  \minted[%linenos,
+          %numbersep=5pt,
+          tabsize=3,
+          frame=lines,
+          framesep=2mm,
+          fontsize=\footnotesize]
+         {vhdl}}
+ {\endminted
+ \endcodefloat}
+\newenvironment{asm}[2][]
+ {\codefloat[htb]
+  \if\relax\detokenize{#1}\relax\else\caption{#1}\fi
+  \if\relax\detokenize{#2}\relax\else\label{#2}\fi 
+  \minted[%linenos,
+          %numbersep=5pt,
+          tabsize=3,
+          frame=lines,
+          framesep=2mm,
+          fontsize=\footnotesize]
+         {c}}
+ {\endminted
+ \endcodefloat}
+
+%%%%%%%%%%%%
+%%% COMMENTS AND TODO-MARKERS
+%%%%%%%%%%%%
+
+% \newcommand{\comment}[3]{\marginpar{\textcolor{#2}{Comment: #1}}\textcolor{#2}{\textit{[#1: #3]}}}
+% \newcommand{\TF}[1]{\comment{TF}{orange}{#1}}
+% \newcommand{\LS}[1]{\comment{LS}{blue}{#1}}
+% 
+% \newcommand{\qn}{\todo{qn!}}
+% \newcommand{\sectodo}{\todo{Still todo.}}
+% \newcommand{\seccheck}{\marginpar{\textcolor{orange}{reread}}}
+% \newcommand{\secthomas}{\marginpar{\textcolor{green}{thomas}}}
+% \newcommand{\secdone}{\marginpar{\textcolor{gray}{done}}}
+% %\newcommand{\todo}[1]{\pagecolor{red!10}\afterpage{\nopagecolor}\textcolor{red}{\textit{[#1]}}\marginpar{\textcolor{red}{\textbf{TODO}}}}
+% \newcommand{\todo}[1]{\textcolor{red}{\textit{[#1]}}\marginpar{\textcolor{red}{\textbf{TODO}}}}
+% 
+% 
+% %%% BLANK COMMANDS FOR PUBLISHING
+% \newcommand{\publish}[1]{}
+% \renewcommand{\publish}[1]{#1} % TODO: uncomment this line before printing!
+% 
+% \publish{\renewcommand{\comment}[3]{}}
+% \publish{\renewcommand{\TF}[1]{}}
+% \publish{\renewcommand{\LS}[1]{}}
+% \publish{\renewcommand{\qn}{}}
+% \publish{\renewcommand{\sectodo}{}}
+% \publish{\renewcommand{\seccheck}{}}
+% \publish{\renewcommand{\secthomas}{}}
+% \publish{\renewcommand{\secdone}{}}
+% \publish{\renewcommand{\todo}[1]{}}
+
+\newcommand{\comment}[3]{\marginpar{\textcolor{#2}{Comment: #1}}\textcolor{#2}{\textit{[#1: #3]}}}
+\newcommand{\TF}[1]{\comment{TF}{red}{#1}}
+\newcommand{\TS}[1]{\comment{TS}{blue}{#1}}
+\newcommand{\FP}[1]{\comment{TS}{orange}{#1}}
+
+%%%%%%%%%%%%
+%%% LOGIC OPERATORS
+%%%%%%%%%%%%
+
+\newcommand{\logicxor}{\texttt{XOR}\xspace}
+\newcommand{\logicor}{$||$\xspace}%TODO: does not show up as OR
+\newcommand{\logicand}{\&\xspace}
+
+%%%%%%%%%%%%
+%%% STUFF
+%%%%%%%%%%%%
+
+\newcommand{\mem}[1]{*#1\xspace}
+\newcommand{\x}{--\xspace}
+
+%%%%%%%%%%%%
+%%% NAMES
+%%%%%%%%%%%%
+
+\newcommand{\procname}{\textsl{LT16x32}\xspace}
+
+%%%%%%%%%%%%
+%%% FORMAT SHORTCUTS
+%%%%%%%%%%%%
+
+\newcommand{\floatplace}{[ht]}
+
+\newcommand{\tc}[1]{\textbf{#1}}
+
+\newcommand{\hex}[1]{#1}
+\newcommand{\bits}[1]{#1}
+
+\newcommand{\filename}[1]{{\small\texttt{#1}}}
+\newcommand{\command}[1]{{\small\texttt{#1}}}
+\newcommand{\inlinevhdl}[1]{{\small\texttt{#1}}} %TODO with syntax highlighting and check for $\_$
+\newcommand{\inlinec}[1]{{\small\texttt{#1}}} %TODO with syntax highlighting and check for $\_$
+\newcommand{\inlineasm}[1]{{\small\texttt{#1}}} %TODO with syntax highlighting and check for $\_$
+
+\newcommand{\instruction}[7]{
+\subsubsection{#1}
+\label{instr_#2}
+\begin{description}
+\nolistskip
+\item[Opcode:] \texttt{#3}
+\item[Assembler:] \inlineasm{#4}
+\item[Operation:] #5
+\item[C-Equivalent:] \inlinec{#6}
+\item[Status Register:] #7
+\end{description}
+}
+
+
+%%%%%%%%%%%%
+%%% TEX WORKAROUNDS
+%%%%%%%%%%%%
+\newcommand{\nolistskip}{\itemsep-3pt}

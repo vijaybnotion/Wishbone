@@ -1,0 +1,16 @@
+\babel@toc {english}{}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Block diagram of the ESyLab-SoC\relax }}{3}{figure.caption.5}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Simplified Block diagram of core architecture with surrounding entities\relax }}{8}{figure.caption.14}%
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Block diagram of the datapath\relax }}{14}{figure.caption.15}%
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Signal Pattern for Interrupt Requests\relax }}{28}{figure.caption.41}%
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Signal Pattern for Trap Instruction\relax }}{28}{figure.caption.42}%
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Signal Pattern for the Instruction Memory Interface\relax }}{30}{figure.caption.45}%
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Signal Pattern for Data Memory Write\relax }}{31}{figure.caption.47}%
+\contentsline {figure}{\numberline {6.3}{\ignorespaces Signal Pattern for Memory Interlacing\relax }}{32}{figure.caption.48}%
+\addvspace {10\p@ }

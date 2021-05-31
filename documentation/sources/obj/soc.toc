@@ -1,0 +1,104 @@
+\babel@toc {english}{}
+\contentsline {chapter}{\numberline {1}Scope of Delivery}{1}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Products}{1}{section.1.1}%
+\contentsline {section}{\numberline {1.2}HowTo: Build Products}{1}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Processor}{1}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Bus Interconnect}{1}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Assembler}{2}{subsection.1.2.3}%
+\contentsline {chapter}{\numberline {2}SoC Architecture}{3}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Interconnect}{4}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Integration of new components}{5}{subsection.2.1.1}%
+\contentsline {paragraph}{The component declaration}{5}{section*.8}%
+\contentsline {paragraph}{The component instantiation}{5}{section*.9}%
+\contentsline {paragraph}{The slave masking vector}{6}{section*.12}%
+\contentsline {section}{\numberline {2.2}Processor Core Wrapper}{6}{section.2.2}%
+\contentsline {section}{\numberline {2.3}Instruction memory}{6}{section.2.3}%
+\contentsline {chapter}{\numberline {3}Processor Architecture}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Block Diagram}{8}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Configuration}{9}{section.3.2}%
+\contentsline {paragraph}{Branch delay slot}{9}{section*.18}%
+\contentsline {paragraph}{Register width}{9}{section*.19}%
+\contentsline {paragraph}{PC width}{10}{section*.20}%
+\contentsline {paragraph}{Interrupt Number Width}{10}{section*.21}%
+\contentsline {paragraph}{Interrupt Priority Width}{10}{section*.22}%
+\contentsline {section}{\numberline {3.3}Pipeline Stages}{10}{section.3.3}%
+\contentsline {paragraph}{Stage 1: Decode/Setup}{10}{section*.23}%
+\contentsline {paragraph}{Stage 2: Load and Execute}{10}{section*.24}%
+\contentsline {paragraph}{Stage 3: Writeback}{10}{section*.25}%
+\contentsline {section}{\numberline {3.4}Registers}{10}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}General Purpose Registers}{10}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Stack Pointer}{11}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Link Register}{11}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Status Register r14}{11}{subsection.3.4.4}%
+\contentsline {subsubsection}{\numberline {3.4.4.1}Runtime Priority - SR[7-2]}{12}{subsubsection.3.4.4.1}%
+\contentsline {subsubsection}{\numberline {3.4.4.2}Truthflag - SR[1]}{12}{subsubsection.3.4.4.2}%
+\contentsline {subsubsection}{\numberline {3.4.4.3}Overflowflag - SR[0]}{12}{subsubsection.3.4.4.3}%
+\contentsline {subsection}{\numberline {3.4.5}Program Counter}{13}{subsection.3.4.5}%
+\contentsline {chapter}{\numberline {4}Assembler and Instructions}{15}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Processor Instructions}{15}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Instruction Format}{15}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}List of available Instructions}{16}{subsection.4.1.2}%
+\contentsline {paragraph}{Arithmetic Operations}{16}{section*.31}%
+\contentsline {paragraph}{Bitwise/Logic Operations}{16}{section*.32}%
+\contentsline {paragraph}{Memory Operations}{16}{section*.33}%
+\contentsline {paragraph}{Branch/Call/Trap Operations}{16}{section*.34}%
+\contentsline {paragraph}{Miscellaneous Operations}{16}{section*.35}%
+\contentsline {subsubsection}{\numberline {4.1.2.1}Signed Addition}{17}{subsubsection.4.1.2.1}%
+\contentsline {subsubsection}{\numberline {4.1.2.2}Signed Subtraction}{17}{subsubsection.4.1.2.2}%
+\contentsline {subsubsection}{\numberline {4.1.2.3}Bitwise AND}{17}{subsubsection.4.1.2.3}%
+\contentsline {subsubsection}{\numberline {4.1.2.4}Bitwise OR}{17}{subsubsection.4.1.2.4}%
+\contentsline {subsubsection}{\numberline {4.1.2.5}Bitwise XOR}{17}{subsubsection.4.1.2.5}%
+\contentsline {subsubsection}{\numberline {4.1.2.6}Logic Shift Left}{18}{subsubsection.4.1.2.6}%
+\contentsline {subsubsection}{\numberline {4.1.2.7}Logic Shift Right}{18}{subsubsection.4.1.2.7}%
+\contentsline {subsubsection}{\numberline {4.1.2.8}Signed Addition with Immediate}{18}{subsubsection.4.1.2.8}%
+\contentsline {subsubsection}{\numberline {4.1.2.9}Compare}{18}{subsubsection.4.1.2.9}%
+\contentsline {subsubsection}{\numberline {4.1.2.10}Load PC Relative}{19}{subsubsection.4.1.2.10}%
+\contentsline {subsubsection}{\numberline {4.1.2.11}Load Data from Pointer}{19}{subsubsection.4.1.2.11}%
+\contentsline {subsubsection}{\numberline {4.1.2.12}Store Data to Pointer}{19}{subsubsection.4.1.2.12}%
+\contentsline {subsubsection}{\numberline {4.1.2.13}Branch to Offset}{20}{subsubsection.4.1.2.13}%
+\contentsline {subsubsection}{\numberline {4.1.2.14}Branch to Register}{20}{subsubsection.4.1.2.14}%
+\contentsline {subsubsection}{\numberline {4.1.2.15}Call to Offset}{20}{subsubsection.4.1.2.15}%
+\contentsline {subsubsection}{\numberline {4.1.2.16}Call to Register}{21}{subsubsection.4.1.2.16}%
+\contentsline {subsubsection}{\numberline {4.1.2.17}Trap}{21}{subsubsection.4.1.2.17}%
+\contentsline {subsubsection}{\numberline {4.1.2.18}Return from Interrupt}{21}{subsubsection.4.1.2.18}%
+\contentsline {subsubsection}{\numberline {4.1.2.19}Branch to Table}{21}{subsubsection.4.1.2.19}%
+\contentsline {subsubsection}{\numberline {4.1.2.20}Test and Set}{22}{subsubsection.4.1.2.20}%
+\contentsline {section}{\numberline {4.2}Assembler}{22}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}HowTo: Assemble Input Files}{22}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Allowed Input}{22}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Pseudo Instructions}{23}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Directives}{23}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Labels}{23}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Assembler Options}{24}{subsection.4.2.6}%
+\contentsline {subsection}{\numberline {4.2.7}Output}{24}{subsection.4.2.7}%
+\contentsline {section}{\numberline {4.3}HowTo: Add more instructions}{25}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Processor Side}{25}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Assembler Side}{25}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}32bit Extension}{25}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Multicycle Instructions}{25}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Interrupts}{26}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Interrupt Controller}{26}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Priority, NMI}{26}{section.5.2}%
+\contentsline {section}{\numberline {5.3}Interface and Timing Diagram}{26}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Interrupt Request}{26}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Trap Implementation}{27}{subsection.5.3.2}%
+\contentsline {subsection}{\numberline {5.3.3}Processor Interrupt Behavior}{27}{subsection.5.3.3}%
+\contentsline {chapter}{\numberline {6}Memory}{29}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Endianess and Memory Width}{29}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Interface and Timing Description}{30}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Instruction Memory Interface}{30}{subsection.6.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.1.1}Read Access}{30}{subsubsection.6.2.1.1}%
+\contentsline {subsection}{\numberline {6.2.2}Data Memory Interface}{31}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}Read Access}{31}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}Write Access}{31}{subsubsection.6.2.2.2}%
+\contentsline {subsection}{\numberline {6.2.3}Memory Bandwidth Solutions}{32}{subsection.6.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.3.1}Instruction Alignment}{32}{subsubsection.6.2.3.1}%
+\contentsline {subsubsection}{\numberline {6.2.3.2}Processor Stalling}{32}{subsubsection.6.2.3.2}%
+\contentsline {section}{\numberline {6.3}Memory Mapped I/O}{33}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Memory Controller}{33}{section.6.4}%
+\contentsline {chapter}{\numberline {7}Guides}{34}{chapter.7}%
+\contentsline {section}{\numberline {7.1}How to implement a lookup or branch table}{34}{section.7.1}%
+\contentsline {section}{\numberline {7.2}How to test a design using the CAN test package}{36}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Simulating a CAN transmission}{36}{subsection.7.2.1}%
+\contentsline {subsection}{\numberline {7.2.2}Creating a test network}{37}{subsection.7.2.2}%
+\contentsline {subsection}{\numberline {7.2.3}Integrating the approaches in a test bench}{38}{subsection.7.2.3}%

@@ -1,0 +1,62 @@
+\chapter{Scope of Delivery}
+\section{Products}
+Containing in the ESyLab-SoC are the the processor core \procname, 
+a configurable Wishbone bus interconnect module, 
+a minimal interrupt controller and peripheral devices.
+
+An instruction memory is also supplied.
+It reads a file with machine code during elaboration, 
+so the SoC can both be simulated and synthesized.
+The assembler to produce that machine code is also supplied in source.
+
+\section{HowTo: Build Products}
+\label{sec:scope_build}
+The products are delivered as HDL source code. 
+This allows adaptation to any platform, for which the needed tools are available (see sections below).
+
+\subsection{Processor}
+The processor is delivered as a set of VHDL files, including one top entity (processor in \filename{processor.vhd}) which can be used in any VHDL synthesis tool.
+For simulation, the entity \inlinevhdl{core\_tb} (in \filename{core\_tb.vhd}) can be used. Both architectures instantiate the core, a memory controller and a interrupt controller.
+The filename of the used program can be set in these files in the generic map of the memory controller instantiation (see Listing \ref{lst:memory_file}).
+Here, also the memory size can be determined (as number of stored words). For details on the memory controller see Section \ref{sec:memoryctrl}.
+
+\begin{vhdl}[Generic Map Extract of Memory Controller]{lst:memory_file}
+memory_inst : component memory
+	generic map(filename     => "../programs/test.ram",
+		        size         => 32,
+		        [...]
+		        )
+\end{vhdl}
+
+The processor is wrapped in another module,
+which implements the Wishbone bus-interface for the data memory interface of the processor.
+
+\subsection{Bus Interconnect}
+The bus interconnect system is configureable to any number of slave and master modules,
+the appropriate configuration values (see Listing~\ref{lst:wishbone_config}) can be found in the file \verb=lib/wishbone.vhd=.
+\begin{vhdl}[Wishbone interconnect configuration]{lst:wishbone_config}
+...
+constant NWBMST:	integer	:=4; 
+	--Number of Wishbone master connectors on the Interconnect
+constant NWBSLV:	integer :=16; 
+	--Number of Wishbone slave connectors on the Interconnect
+...
+\end{vhdl}
+All connections can be masked during its instantiation,
+using the slave and master mask vectors (see Listing~\ref{lst:wishbone_mask_config}).
+They are declared in the top level architecture and are used during instantiation of the interconnection component.
+\begin{vhdl}[Wishbone interconnect configuration]{lst:wishbone_mask_config}
+...
+	constant slv_mask_vector : std_logic_vector(0 to NWBSLV-1) := b"1110_0000_0000_0000";
+	constant mst_mask_vector : std_logic_vector(0 to NWBMST-1) := b"1000";
+...
+\end{vhdl}
+The component handles synchronous Wishbone cycle termination.
+
+\subsection{Assembler}
+For building the assembler the GNU tools \filename{gcc}, \filename{make}, \filename{bison} and \filename{flex} are needed. With these tools installed, the \filename{make} script can be used to generate an executable called \filename{asm}:
+\begin{verbatim}
+	($SOCROOT)/assembler/$ make all
+\end{verbatim}
+
+It is recommended to either copy or dynamically link the assembler executable in a directory in your \verb=$PATH= or  directly referenced by in your build tool chain.

@@ -1,0 +1,359 @@
+\chapter{Assembler and Instructions}
+
+\section{Processor Instructions}
+The \procname features a RISC instruction set with 16bit instructions and is prepared to be extended with 32bit and allows multicycle instructions.
+In 16bit instructions, the first nibble (4bits) of the instruction code is the opcode determining the operation.
+The opcode \bits{1111} is reserved for 32bit instructions which are always are word aligned.
+
+\subsection{Instruction Format}
+Several different instruction formats are used in the \procname.
+As at the moment, no 32bit instruction is implemented, this section describes instruction formats for 16bit instructions only.
+Each halfword is split up into four nibbles (each of a size of 4bits), whose meaning can be seen in Table \ref{tbl:instr_formatnibbles}.
+
+\begin{table}
+\caption{16bit Instruction Formats}
+\label{tbl:instr_formatnibbles}
+\begin{center}
+\begin{tabular}{|l||c|c|c|c||p{0.2\textwidth}|}
+\hline
+Format				& 15-12		& 11-8		& 7-4		& 3-0		& Example Uses\\
+\hline\hline
+Three Registers		& opcode		& Rd			& Ra			& Rb			& Calculations\\
+\hline
+4bit Immediate		& opcode		& Rd			& Ra			& Imm(3-0)	& Shift\\
+\hline
+8bit Immediate		& opcode		& Rd			& Imm(7-4)	& Imm(3-0)	& Add Immediate, Load PC-Relative\\
+\hline
+Mode	 with Register	& opcode		& Mode		& Ra			& Rb			& Compare, Load/Store\\
+\hline
+Mode	 with Immediate	& opcode		& Mode		& Imm(7-4)	& Imm(3-0)	& Branch/Call to Immediate\\
+\hline
+\end{tabular}
+\end{center}
+\end{table}
+
+\subsection{List of available Instructions}
+\label{sec:instructionlist}
+The following instructions are supported:
+\paragraph{Arithmetic Operations}
+\begin{itemize}
+\nolistskip
+\item \hyperref[instr_add]{Signed Addition}
+\item \hyperref[instr_sub]{Signed Subtraction}
+\item \hyperref[instr_addi]{Signed Addition with Immediate}
+\end{itemize}
+\paragraph{Bitwise/Logic Operations}
+\begin{itemize}
+\nolistskip
+\item \hyperref[instr_and]{Bitwise AND}
+\item \hyperref[instr_or]{Bitwise OR}
+\item \hyperref[instr_xor]{Bitwise XOR}
+\item \hyperref[instr_lsh]{Logic Shift Left}
+\item \hyperref[instr_rsh]{Logic Shift Right}
+\item \hyperref[instr_cmp]{Compare}
+\end{itemize}
+\paragraph{Memory Operations}
+\begin{itemize}
+\nolistskip
+\item \hyperref[instr_ldr]{Load PC Relative}
+\item \hyperref[instr_ld]{Load Data from Pointer}
+\item \hyperref[instr_st]{Store Data to Pointer}
+\end{itemize}
+\paragraph{Branch/Call/Trap Operations}
+\begin{itemize}
+\nolistskip
+\item \hyperref[instr_bri]{Branch to Offset}
+\item \hyperref[instr_brr]{Branch to Register}
+\item \hyperref[instr_calli]{Call to Offset}
+\item \hyperref[instr_callr]{Call to Register}
+\item \hyperref[instr_trap]{Trap}
+\item \hyperref[instr_reti]{Return from Interrupt}
+\item \hyperref[instr_brt]{Branch to Table}
+\end{itemize}
+\paragraph{Miscellaneous Operations}
+\begin{itemize}
+\nolistskip
+\item \hyperref[instr_tst]{Test and Set}
+\end{itemize}
+
+\instruction{Signed Addition}{add}
+	{0011 dddd aaaa bbbb}
+	{add rd, ra, rb}
+	{Registers ra and rb are treated as two signed numbers and are added. The result is stored in rd.}
+	{rd = ra + rb;}
+	{The overflow flag is updated.}
+
+\instruction{Signed Subtraction}{sub}
+	{0001 dddd aaaa bbbb}
+	{add rd, ra, rb}
+	{Registers ra and rb are treated as two signed numbers and are subtracted. The result is stored in rd.}
+	{rd = ra - rb;}
+	{The overflow flag is updated.}
+	
+\instruction{Bitwise AND}{and}
+	{0010 dddd aaaa bbbb}
+	{and rd, ra, rb}
+	{Registers ra and rb are treated as bit masks and are anded with each other. The result is stored in rd.}
+	{rd = ra \& rb;}
+	{No flag is updated.}
+
+\instruction{Bitwise OR}{or}
+	{0000 dddd aaaa bbbb}
+	{or rd, ra, rb}
+	{Registers ra and rb are treated as bit masks and are ored with each other. The result is stored in rd.}
+	{rd = ra | rb;}
+	{No flag is updated.}
+
+\instruction{Bitwise XOR}{xor}
+	{0100 dddd aaaa bbbb}
+	{xor rd, ra, rb}
+	{Registers ra and rb are treated as bit masks and are xored with each other. The result is stored in rd.}
+	{rd = ra $\hat\ $ rb;}
+	{No flag is updated.}
+	
+\instruction{Logic Shift Left}{lsh}
+	{0101 dddd aaaa bbbb}
+	{lsh rd, ra, imm}
+	{Register ra is treated as bit masks and shifted to the left by imm bits, ra is filled with zeroes. imm is treated as unsigned number. The result is stored in rd. Internally, imm is incremented by one, which is compensated for in the assembler.}
+	{rd = ra $<<$ imm;}
+	{No flag is updated.}
+	
+\instruction{Logic Shift Right}{rsh}
+	{0110 dddd aaaa bbbb}
+	{rsh rd, ra, imm}
+	{Register ra is treated as bit masks and shifted to the right by imm bits, ra is filled with zeroes. imm is treated as unsigned number. The result is stored in rd. Internally, imm is incremented by one, which is compensated for in the assembler.}
+	{rd = ra $>>$ imm;}
+	{No flag is updated.}
+
+\instruction{Signed Addition with Immediate}{addi}
+	{0111 dddd iiii iiii}
+	{addi rd, imm}
+	{Register rd and imm are treated as signed numbers and are added. The result is stored in rd.}
+	{rd = rd + imm;}
+	{The overflow flag is updated.}
+
+\instruction{Compare}{cmp}
+	{1000 mmmm aaaa bbbb}
+	{cmp mode ra, rb}
+	{Registers ra and rb are treated as signed numbers and are compared. If the condition, given by mode is true, the truth-flag is set, otherwise reset. Allowed modes are\begin{description}\nolistskip
+	\item[0000, eq]equal
+	\item[1000, neq]not equal
+	\item[0010, gg]greater
+	\item[0001, ge]greater or equal
+	\item[1001, ll]less
+	\item[1010, le]less or equal
+	\end{description}}
+	{(ra == rb) ? (T=1) : (T=0);\\// where == is interchangable by mode}
+	{The truth flag is updated.}
+
+\instruction{Load PC Relative}{ldr}
+	{1010 dddd iiii iiii}
+	{ldr rd, imm}
+	{Register rd is loaded with memory data from address (PC+(imm$<<$1)), where imm is treated as signed number and is left shifted by one bit.}
+	{rd = *(PC + (imm$<<$1)}
+	{No flag is updated.}
+
+\instruction{Load Data from Pointer}{ld}
+	{1011 0mmm aaaa bbbb}
+	{ld08 ra, rb\\ld16 ra, rb\\ld32 ra, rb}
+	{Loads data from pointer. Register rb's content is used as absolute address, the loaded data is written to register ra. Following modes are supported:
+	\begin{description}
+	\nolistskip
+	\item[000] Load byte
+	\item[001] Load halfword
+	\item[010] Load word
+\end{description}		
+	}
+	{ra = *rb}
+	{No flag is updated}
+	
+\instruction{Store Data to Pointer}{st}
+	{1011 1mmm aaaa bbbb}
+	{st08 ra, rb\\st16 ra, rb\\st32 ra, rb}
+	{Stores data to pointer. Register ra's content is used as absolute address to store the content of register rb. Following modes are supported:
+	\begin{description}
+	\nolistskip
+	\item[000] Store byte
+	\item[001] Store halfword
+	\item[010] Store word
+\end{description}
+	As the data is valid only after two clock cycles, the user must ensure that the same address is not used in read transactions in the following instruction (such as ld, ldr, tst). 
+	}
+	{*ra = rb}
+	{No flag is updated}
+
+\instruction{Branch to Offset}{bri}
+	{1100 010c iiii iiii}
+	{br imm\\br always/true imm}
+	{Sets the program counter to PC+imm, where imm is treated as signed number. For details about the branch delay slot see section \ref{sec:branchdelayslot}. If c==1, the branch is conditional and performed only, if the truth flag is set.}
+	{if ((c==0) \logicor (T==1)) goto (PC+imm$<<$1);}
+	{No flag is updated}
+
+\instruction{Branch to Register}{brr}
+	{1100 011c aaaa xxxx}
+	{br ra\\br always/true ra}
+	{Sets the program counter to register a. For details about the branch delay slot see section \ref{sec:branchdelayslot}. If c==1, the branch is conditional and performed only, if the truth flag is set.}
+	{if ((c==0) \logicor (T==1)) goto (ra$<<$1);}
+	{No flag is updated}
+	
+\instruction{Call to Offset}{calli}
+	{1100 100c iiii iiii}
+	{call imm\\call always/true imm}
+	{Sets the program counter to PC+imm, where imm is treated as signed number, and stores the current program counter in the link register. If c==1, the call is conditional and performed only, if the truth flag is set. This is a multicycle operation which consumes two clock cycles.}
+	{if ((c==0) \logicor (T==1)) \{LR=PC; goto (PC+imm);\}}
+	{No flag is updated}
+	
+\instruction{Call to Register}{callr}
+	{1100 101c aaaa xxxx}
+	{call ra\\call always/true ra}
+	{Sets the program counter to register a and stores the current program counter in the link register. If c==1, the call is conditional and performed only, if the truth flag is set. This is a multicycle operation which consumes two clock cycles.}
+	{if ((c==0) \logicor (T==1)) \{LR=PC; goto (ra$<<$1);\}}
+	{No flag is updated}
+
+\instruction{Trap}{trap}
+	{1100 11xx iiii iiii}
+	{trap imm}
+	{Request an interrupt of number imm. Number of bits for imm can be set in processor configuration, the number must be right aligned.}
+	{no equivalent}
+	{No flag is updated}
+
+\instruction{Return from Interrupt}{reti}
+	{1100 000x xxxx xxxx}
+	{reti}
+	{Returns from Interrupt, by popping the link and status register from the stack and branching to the current link register contents. This is a multicycle operation which consumes five clock cycles.}
+	{no equivalent}
+	{No flag is updated.}
+
+\instruction{Branch to Table}{brt}
+	{1100 001c aaaa xxxx}
+	{brt ra}
+	{Increments the program counter by register a. This allows for easy creation of branch tables. For details about the branch delay slot see section \ref{sec:branchdelayslot}. If c==1, the branch is conditional and only performed if the truth flag is set.}
+	{PC = PC + (ra$<<$1)}
+	{No flag is updated.}
+
+\instruction{Test and Set}{tst}
+	{1001 dddd aaaa xxxx}
+	{tst rd, ra}
+	{Test and set can be used to implement mutexes. The lower seven bits of the byte can be used to implement semaphores.}
+	{temp=$_\text{byte}$*ra; rd = temp;\\T = (temp \& 0x80==0); temp=temp $|$ 0x80; *ra=$_\text{byte}$temp;}
+	{The T-flag is set if the mutex is free and reset if the mutex is already reserved.}
+
+\section{Assembler}
+
+The supplied assembler is a two-pass assembler (see thesis, Section 2.6) based on \filename{flex} and \filename{bison} which are used to parse the input file.
+
+\subsection{HowTo: Assemble Input Files}
+A prepared assembler file \filename{input.prog} (see examples in \filename{/source/programs/}) can easily assembled into a formatted file \filename{output.ram} supported by the \procname by calling the assembler \filename{asm}:
+\begin{verbatim}
+asm input.prog -o output.ram
+\end{verbatim}
+
+\subsection{Allowed Input}
+The input to the assembler is case sensitive and all mnemonics have to be lower case. A typical line follows Listing \ref{lst:asm_general}, where all parts are optional (a mnemonic is needed if parameters are supplied though).
+
+\begin{asm}[General Inputline]{lst:asm_general}
+label: mnemonic mode par1, par2, par3 // comment
+\end{asm}
+
+Parameters can either be registers names r0 to r15, SP, LR, SR or PC,
+or can be immediate values in various number formats (decimal, binary or hexadecimal numbers),
+for prefixes see Table \ref{tbl:asm_numberformats}.
+Binary and hexadecimal numbers are not sign extended and always treated as unsigned values.
+Also, absolute or relative references to labels are allowed as parameters, see Section \ref{sec:labels} for details.
+
+Number and type of parameters vary for each instruction, allowed combinations are listed in Section \ref{sec:instructionlist}.
+
+\begin{table}
+	\begin{center}
+	\begin{tabular}{|c|c|c|}
+	\hline 
+	Numberformat & Prefix & Example\\
+	\hline\hline
+	Decimal      & None   & -45 \\ 
+	Binary       & 0b     & 0b11011 \\ 
+	Hexadecimal  & 0x     & 0xFE \\ 
+	\hline 
+	\end{tabular} 
+	\end{center}
+	\caption{Number Format Prefixes}
+	\label{tbl:asm_numberformats}
+\end{table}
+
+\subsection{Pseudo Instructions}
+Several instructions are supported which are not directly processed by the \procname but which are mapped to other instructions.
+For details on the instructions used, see Section \ref{sec:instructionlist}.
+\begin{description}
+\item[No Operation (nop)] No operation is performed, wait one clock cycle. Mapped to \inlineasm{or r0, r0, r0}.
+\item[Move Register (mov rd, ra)] The content of \inlineasm{ra} is copied to \inlineasm{rd}. Mapped to \inlineasm{or rd, ra, ra}.
+\item[Return (ret)] Returns to callee after a call instruction. Mapped to \inlineasm{br always lr}.
+\item[Clear Register (clr rd)] Resets \inlineasm{rd} to zero. Mapped to \inlineasm{xor rd, rd, rd}.
+\end{description}
+
+\subsection{Directives}%
+\label{sec:AssemblerDirectives}%
+The assembler supports several directives which can be included in the input code, see Listing \ref{lst:asm_directives}.
+\begin{description}
+\item[.word]stores the following parameter directly into the memory.
+\item[.address]inserts nops until the address given as parameter is reached.
+\item[.align]if needed, a 16bit nop is inserted to align the following instruction
+\end{description}
+
+\begin{asm}[Example for the use of directives]{lst:asm_directives}
+// load variables from constant pointer
+           ldr     r0,    >variableA
+           ldr     r1,    >variableB
+
+// store variableA           
+           .align       // fix eventual non-word-alignment
+variableA: .word 0x1234
+
+// store variableB
+           .address 0x100 // store variableB at address 0x100
+variableB: .word    0xABCD
+\end{asm}
+
+\subsection{Labels}
+\label{sec:labels}
+Labels can be set in the code directly, as seen in Listing \ref{lst:asm_general}.
+They can be reffered to in absolute or relative manner (see Listing \ref{lst:asm_labels}).
+Label names can include upper and lower case letters, numbers and underscores.
+While absolute referencing puts the whole address into the output, relative referencing adds only the difference to the address of instruction which is referencing to the label.
+\begin{asm}[Label References]{lst:asm_labels}
+label:  br   >label // relative reference
+       .word =label // absolute reference
+\end{asm}
+
+\subsection{Assembler Options}
+Several command line options are available:
+\begin{description}
+\item[-o filename]Determines the output file.
+\item[-m filename]The assembler outputs a map file, containing all labels and their addresses.
+\item[-v or -\xspace -verbose]Outputs all intermediate information.
+\item[-\xspace -autoalign]Automatically aligns 32bit instruction and immediate values
+\item[-\xspace -fillbds]Fills branch delay slots with nop instruction (i.e. inserts nop after all branches)
+\item[-\xspace -continue-on-error]Continues parsing even with errors.
+\end{description}
+
+\subsection{Output}
+The standard output format is a one-word-per-line bitstring representation of the instruction memory, which can directly be read by the testbench provided and used as input for memory synthesis.
+
+\section{HowTo: Add more instructions}
+\subsection{Processor Side}
+\begin{enumerate}
+\item Add opcode constant define to \verb=lt16x32_internal= package.
+\item Add case to 16bit decoder and set control signals that differ from default settings.
+\end{enumerate}
+\subsection{Assembler Side}
+\begin{enumerate}
+\item Add enumerate item to op$\_$t in global.h
+\item Add pattern to flex code in asm.l
+\item Add handling to handle$\_$xy.c according to wished syntax style.
+\item Recompile assembler by running the make script.
+\end{enumerate}
+\subsection{32bit Extension}
+If 32bit instruction should be implemented, follow the structure of the 16bit decoder to implement the 32bit decoder in \filename{decoder\_32bit.vhd}.
+
+\subsection{Multicycle Instructions}
+To implement multicycle operations, changes need to be implemented in \filename{decoder$\_$fsm.vhd}.
+Use the implementation of \textit{reti} as an example.
+
